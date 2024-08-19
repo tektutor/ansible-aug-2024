@@ -14,3 +14,9 @@ https://rpsconsulting116.examly.io/contest/public?U2FsdGVkX1+WjJEXq04xM/lciWVLN6
 - Once you are done with the pre-test, kindly notify me to proceed with the training
 - Copy/Paste between your laptop and lab machine is disabled as per your bank policy
 </pre>
+
+#### Login Credentials to RPS Cloud Lab machine
+<pre>
+username - rps
+password - Password@1
+</pre>
