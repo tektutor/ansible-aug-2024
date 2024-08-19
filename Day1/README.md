@@ -328,3 +328,20 @@ docker rm -f $(docker ps -aq)
 
 Expected output
 ![image](https://github.com/user-attachments/assets/d94243e9-0adc-46d2-8e0a-08c16304fb3c)
+
+## Lab - Getting inside a running container shell
+```
+docker ps -a
+docker run -dit --name ubuntu1 --hostname ubuntu1 ubuntu:latest /bin/bash
+docker run -dit --name ubuntu2 --hostname ubuntu2 ubuntu:latest /bin/bash
+docker ps
+
+docker exec -it ubuntu1 /bin/bash
+hostname
+hostname -i
+exit
+docker ps
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/b67a615a-3c3a-4658-a6d4-060c0de52213)
