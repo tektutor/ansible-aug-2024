@@ -530,3 +530,12 @@ Expected output
 - follows a specific structure
 - invokes one to many ansible modules in specific order one after the other
 </pre>
+
+## Lab - Checking ansible core version installed in our Ubuntu lab machine
+```
+ansible --version
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/dd4bc117-f94e-454c-9d7f-9c9e9a06f34e)
+![image](https://github.com/user-attachments/assets/7505fe45-7a87-4006-9589-570823294851)
