@@ -182,6 +182,7 @@ Expected output
 ## Lab - Creating a container in interactive/foreground mode
 ```
 docker run -it --name ubuntu1 --hostname ubuntu1 ubuntu:latest /bin/bash
+exit
 ```
 In the above command
 <pre>
@@ -193,12 +194,12 @@ ubuntu:latest is the docker image
 /bin/bash - is the terminal/application that will be started when the container starts running
 </pre>
 
-Listing all the running containers
+Listing all the running containers ( try this from a different terminal window )
 ```
 docker ps
 ```
 
-Listing all containers
+Listing all containers ( try this from a different terminal window )
 ```
 docker ps -a
 ```
