@@ -291,3 +291,14 @@ docker ps -a
 
 Expected output
 ![image](https://github.com/user-attachments/assets/eb08fb73-4d6d-4a7b-867b-1ef937617ad6)
+
+## Lab - Deleting multiple containers without calling out their names
+```
+docker ps -a
+docker ps -q
+docker rm $(docker ps -aq)
+docker ps -a
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/5677f53d-1eb5-4ed8-bc05-64c555721016)
