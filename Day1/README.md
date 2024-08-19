@@ -183,6 +183,15 @@ Expected output
 ```
 docker run -it --name ubuntu1 --hostname ubuntu1 ubuntu:latest /bin/bash
 ```
+In the above command
+<pre>
+it - interative terminal
+run - will create a new container and starts it
+ubuntu1 - is the name of the container
+ubuntu1 - is the hostname of the container
+ubuntu:latest is the docker image
+/bin/bash - is the terminal/application that will be started when the container starts running
+</pre>
 
 Listing all the running containers
 ```
