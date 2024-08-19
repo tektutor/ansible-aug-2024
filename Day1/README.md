@@ -212,3 +212,24 @@ Expected output
 ![image](https://github.com/user-attachments/assets/dff22987-a275-42eb-8c06-49b6e4be1c42)
 
 
+## Lab - Starting an exited container
+```
+docker ps -a
+docker start ubuntu1
+docker start ubuntu2
+docker ps
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/4adefd55-a99a-4516-84d1-157a963e2b23)
+
+## Lab - Stopping a running container
+```
+docker ps
+docker stop ubuntu1
+docker stop ubuntu2
+docker ps -a
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/86cb91e7-b062-4d79-be80-a3fd812e969a)
