@@ -177,3 +177,22 @@ docker images
 Expected output
 ![image](https://github.com/user-attachments/assets/dfbbc84e-dd2f-4b52-89bf-c4de330daadd)
 ![image](https://github.com/user-attachments/assets/36df4180-6069-48e6-844c-2cc02ead79d5)
+
+
+## Lab - Creating a container in interactive/foreground mode
+```
+docker run -it --name ubuntu1 --hostname ubuntu1 ubuntu:latest /bin/bash
+```
+
+Listing all the running containers
+```
+docker ps
+```
+
+Listing all containers
+```
+docker ps -a
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/47c0e070-419a-4077-9288-33fba0feca8f)
