@@ -11,6 +11,11 @@ tree
 Expected output
 ![image](https://github.com/user-attachments/assets/3814fc04-2223-489f-b44c-0f3efee256ea)
 
+## Lab - Installing tree utility in Ubuntu lab machine
+```
+sudo apt update && apt install -y tree
+```
+
 ## Checking if all the tools required for the training are installed in your lab machine
 ```
 docker --version
