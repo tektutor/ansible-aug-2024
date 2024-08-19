@@ -539,3 +539,12 @@ ansible --version
 Expected output
 ![image](https://github.com/user-attachments/assets/dd4bc117-f94e-454c-9d7f-9c9e9a06f34e)
 ![image](https://github.com/user-attachments/assets/7505fe45-7a87-4006-9589-570823294851)
+
+## Info - Ansible tools
+<pre>
+ansible - used to run ansible ad-hoc commands
+ansible-playbook - used to run ansible playbooks
+ansible-doc - used to get help manuals about individual ansible modules
+ansible-galaxy - used to develop,download/install reusuable ansible roles
+ansible-vault - helps in securing login credentials or any sensitive information in encrypted format and use them within playbook securely
+</pre>
