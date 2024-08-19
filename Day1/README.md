@@ -143,5 +143,13 @@ Expected output
   - Docker is a Container Engine that depends on containerd which in turn depends on runC container runtime to manage images/containers
   - Podman is a Container Engine that depends on CRI-O container runtime to manage images and containers
 - endusers like us, normally only use the Container Engines not the Container Runtime
-
 </pre>
+
+
+## Lab - Listing all the docker images from your local docker registry
+```
+docker images
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/7aa82daf-98e3-4cbe-a131-73126b8f1ae4)
