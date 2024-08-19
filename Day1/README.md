@@ -193,6 +193,9 @@ ubuntu1 - is the hostname of the container
 ubuntu:latest is the docker image
 /bin/bash - is the terminal/application that will be started when the container starts running
 </pre>
+Expected output
+![image](https://github.com/user-attachments/assets/47c0e070-419a-4077-9288-33fba0feca8f)
+
 
 Listing all the running containers ( try this from a different terminal window )
 ```
@@ -205,4 +208,6 @@ docker ps -a
 ```
 
 Expected output
-![image](https://github.com/user-attachments/assets/47c0e070-419a-4077-9288-33fba0feca8f)
+![image](https://github.com/user-attachments/assets/dff22987-a275-42eb-8c06-49b6e4be1c42)
+
+
