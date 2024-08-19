@@ -64,7 +64,7 @@ Expected output
 </pre>
 
 ## Info - Hypervisor High-Level Architecture
-
+![Hypervisor](HypervisorHighLevelArchitecture.png)
 ## Info - Docker Overview
 
 ## Info - Docker High-Level Architecture
