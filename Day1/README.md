@@ -382,3 +382,5 @@ tree
 Expected output
 ![image](https://github.com/user-attachments/assets/8cf7ac24-ed83-459b-920b-e0e4426fe946)
 ![image](https://github.com/user-attachments/assets/061710a3-00cd-4056-81dd-56c2e8018935)
+
+## Info - Configuration Management Tool Overview
