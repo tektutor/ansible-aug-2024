@@ -384,3 +384,63 @@ Expected output
 ![image](https://github.com/user-attachments/assets/061710a3-00cd-4056-81dd-56c2e8018935)
 
 ## Info - Configuration Management Tool Overview
+<pre>
+- configuration management tool helps us automate the software installation/updates/upgrades/uninstallations
+- helps in automating user management
+- helps in provisioning Operating system in on-prem environment, public cloud
+- helps in automating any system administation activity
+- though configuration management tools supports some basic provisioning, provisioning is not the strength of configuration management
+- for provisioning a system, ideal tool we must consider is Vagrant, Cloudfromation(AWS), Terraform ( cloud neutral -works locally as well as on all public clouds )4
+- examples
+  - Puppet
+  - Chef
+  - Ansible
+</pre>
+
+## Info - Puppet
+<pre>
+- is a configuration management tool
+- developed by company name Perforce
+- this was the very first configuration management that came around year 2008
+- it uses a Puppet's proprietary Domain Specific Language(DSL) 
+  - DSL is the language in which the automation code is written
+- puppet follows client/server architecture
+- puppet follows pull based architecture
+- the servers managed by Puppet is called Puppet Nodes ( Windows, Unix/linux, Mac Servers )
+- in all the Puppet nodes, we need to install Puppet agents
+- the Puppet agents keeps polling the Puppet Server
+- the Puppet server will have all the automation scripts
+- we need to install puppets tools to develop the automation scripts on our laptop/desktop and we need to push the automation scripts to the Puppert server
+- it is the responsibility of the Puppet nodes ( puppet agent ) to detect new automation scripts on the puppet server, once it detects new scripts, the puppet agent downloads(pull) the automtion scripts and they run them locally on the respective puppet nodes and reports the status to the Puppet server
+</pre>
+
+
+## Info - Chef 
+<pre>
+- Chef is configuration management tools that came after Puppet
+- Chef uses a Ruby scripting language as the Domain Specific Language (DSL)
+- 
+</pre>
+
+## Info - Ansible
+<pre>
+- Ansible is a configuration management tool that came after Chef and Puppet
+- is agentless ( doesn't follow client/server architecture)
+- no proprietary tools need to be installed in Ansible Nodes
+- Ansible Nodes are the servers where software installation automation must be done
+- ansible nodes can be 
+  - windows server
+  - unix/linux/mac server
+- the ansible configuration management tool can only be installed on linux distributions only
+  - but it works in unix/mac
+- it comes in 2 flavours
+  1. Ansible Core
+  - opensource
+  - command-line only
+  - developed in Python language by Michael Deehan
+  - Michael Deehan - he was former employee of Red Hat
+  - DSL used is YAML ( Yet Another Markup Language )
+  2. Ansible Tower
+  - enterprise product
+  - developed on top of opensource ansible core
+</pre>
