@@ -270,3 +270,14 @@ docker ps -a
 
 Expected output
 ![image](https://github.com/user-attachments/assets/77da39d5-17a4-4952-babc-5e2d2c4e0357)
+
+## Lab - Creating and starting containers in backgraound(deattached/daemon) mode
+```
+docker ps
+docker run -dit --name ubuntu3 --hostname ubuntu3 ubuntu:latest /bin/bash
+docker run -dit --name ubuntu4 --hostname ubuntu4 ubuntu:latest /bin/bash
+docker ps
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/c8b86299-877a-4295-bf36-54b303262ea3)
