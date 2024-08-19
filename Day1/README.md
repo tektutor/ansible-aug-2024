@@ -302,3 +302,11 @@ docker ps -a
 
 Expected output
 ![image](https://github.com/user-attachments/assets/5677f53d-1eb5-4ed8-bc05-64c555721016)
+
+## Lab - Print only running docker container names
+```
+docker inspect --format '{{.Name}}' $(docker ps -q)
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/966b3e14-11e8-4dc4-9e34-d16bb1130a15)
