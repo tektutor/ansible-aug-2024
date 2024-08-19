@@ -354,3 +354,16 @@ docker inpsect -f {{.NetworkSettings.IPAddress}} ubuntu1
 ```
 Expected output
 ![image](https://github.com/user-attachments/assets/3eef6a6c-da69-4d03-a391-8aff52bbfb9a)
+
+## Lab - Building a custom docker image installing required tools
+```
+cd ~/ansible-aug-2024
+git pull
+cd Day1/CustomDockerImage
+cat Dockerfile
+docker build -t tektutor/ubuntu:latest .
+docker images
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/5b5f3615-8484-44e4-a2b5-4270976b04be)
