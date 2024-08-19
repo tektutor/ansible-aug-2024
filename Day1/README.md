@@ -310,3 +310,21 @@ docker inspect --format '{{.Name}}' $(docker ps -q)
 
 Expected output
 ![image](https://github.com/user-attachments/assets/966b3e14-11e8-4dc4-9e34-d16bb1130a15)
+
+## Lab - Deleting multiple running container forcibly
+```
+docker ps -a
+docker run -dit --name ubuntu1 --hostname ubuntu1 ubuntu:latest /bin/bash
+docker run -dit --name ubuntu2 --hostname ubuntu2 ubuntu:latest /bin/bash
+docker ps
+
+docker rm -f ubuntu1 ubuntu2
+docker run -dit --name ubuntu1 --hostname ubuntu1 ubuntu:latest /bin/bash
+docker run -dit --name ubuntu2 --hostname ubuntu2 ubuntu:latest /bin/bash
+docker ps
+
+docker rm -f $(docker ps -aq)
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/d94243e9-0adc-46d2-8e0a-08c16304fb3c)
