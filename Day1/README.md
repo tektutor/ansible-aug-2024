@@ -153,3 +153,4 @@ docker images
 
 Expected output
 ![image](https://github.com/user-attachments/assets/7aa82daf-98e3-4cbe-a131-73126b8f1ae4)
+![image](https://github.com/user-attachments/assets/c5f0b36a-3945-4bbc-ba62-a7a170269e48)
