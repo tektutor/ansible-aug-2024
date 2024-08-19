@@ -345,3 +345,12 @@ docker ps
 
 Expected output
 ![image](https://github.com/user-attachments/assets/b67a615a-3c3a-4658-a6d4-060c0de52213)
+
+## Lab - Finding a container IP address
+```
+docker ps
+docker inspect ubuntu1 | grep IPA
+docker inpsect -f {{.NetworkSettings.IPAddress}} ubuntu1 
+```
+Expected output
+![image](https://github.com/user-attachments/assets/3eef6a6c-da69-4d03-a391-8aff52bbfb9a)
