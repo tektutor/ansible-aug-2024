@@ -415,7 +415,7 @@ Expected output
 </pre>
 
 
-## Chef Configuration Management Tool
+## Info - Chef Configuration Management Tool
 - requires 3 different types of machines
   - Chef Server
   - Chef Workstation
@@ -428,7 +428,7 @@ Expected output
   - Cookbook - invokes one or more Recipes
   - Role - invokes one or more Cookbooks
   
-## Chef Server Overview 
+## Info - Chef Server Overview 
 - Developed in Ruby and Erlang
 - Management Web Console - Web Interface
 - BookShelf - Stores Cookbooks
@@ -438,7 +438,7 @@ Expected output
 - Messages - Elastic Search ( supports API for Indexing and Searching )
 - Has built-in Service called chef-server-ctl - monitors and maintain all services in a desired state
 
-## Chef Workstation Overview
+## Info- Chef Workstation Overview
 - Chef client - applies cookbooks, roles, policies on workstation machine
 - Chef Inspec - testing and auditing your applications and infrastructure ( security compliance, policy, etc)
 - Chef Habitat - allows you to build and package your applications and deploy them anywhere
@@ -450,7 +450,7 @@ Expected output
   - helps in running chef-client to force convergence
 - Test Kitchen and Cookstyle - Testing Tools
 
-## Chef Node Overview
+## Info - Chef Node Overview
 - These are servers managed by Chef Configuration Management Software
 - This can be an onprem server, virtual machine, an AWS ec2 instance, an Azure Virtual Machine, Network Switches/Routers, etc.,
 - Could be a Windows Server, Unix/Linux Server, Mac OS-X
@@ -548,6 +548,14 @@ ansible-doc - used to get help manuals about individual ansible modules
 ansible-galaxy - used to develop,download/install reusuable ansible roles
 ansible-vault - helps in securing login credentials or any sensitive information in encrypted format and use them within playbook securely
 </pre>
+
+## Lab - Installing ansible core in Ubuntu
+```
+sudo apt update
+sudo apt install software-properties-common
+sudo add-apt-repository --yes --update ppa:ansible/ansible
+sudo apt install ansible -y
+```
 
 ## Lab - Building a custom ubuntu ansible node docker image
 ```
