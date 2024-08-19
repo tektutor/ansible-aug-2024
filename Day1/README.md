@@ -13,7 +13,7 @@ Expected output
 
 ## Lab - Installing tree utility in Ubuntu lab machine
 ```
-sudo apt update && apt install -y tree
+sudo apt update && sudo apt install -y tree
 ```
 
 ## Checking if all the tools required for the training are installed in your lab machine
