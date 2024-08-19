@@ -15,7 +15,7 @@ https://rpsconsulting116.examly.io/contest/public?U2FsdGVkX1+WjJEXq04xM/lciWVLN6
 - Copy/Paste between your laptop and lab machine is disabled as per your bank policy
 </pre>
 
-#### Login Credentials to RPS Cloud Lab machine ( Password reset you have done is for just the cloud credentials )
+#### Login Credentials to RPS Cloud Lab machine ( Password reset you have done is for cloud login, hence the below credentials for Ubuntu should work )
 <pre>
 username - rps
 password - Password@1
