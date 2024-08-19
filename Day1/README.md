@@ -572,3 +572,14 @@ cd ~/ansible-aug-2024/Day1/CustomAnsibleNodeDockerImage/ubuntu
 cp ~/.ssh/id_rsa.pub authorized_keys
 ls -l
 ```
+
+Let's build our custom ansible ubuntu node docker image
+```
+cd ~/ansible-aug-2024/Day1/CustomAnsibleNodeDockerImage/ubuntu
+docker build -t tektutor/ubuntu-ansible-node:latest .
+docker images
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/59833e52-9252-4937-b844-0a73ff8a4460)
+![image](https://github.com/user-attachments/assets/b6b7966f-a979-451f-9523-546a457b39df)
