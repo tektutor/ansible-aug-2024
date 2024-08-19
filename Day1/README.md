@@ -87,6 +87,7 @@ Expected output
   - runs as a service in the background
 </pre>
 ## Info - Docker High-Level Architecture
+![Docker](DockerHighLevelArchitecture.png)
 
 ## Info - Docker Image Overview
 
