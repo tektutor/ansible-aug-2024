@@ -129,6 +129,9 @@ Expected output
 - examples
   - runC is a Container Runtime
   - CRI-O is a Container Rutnime
+- depends on OS Kernel
+  - Namespace
+  - Control Groups aka CGroups
 </pre>
 
 ## Info - Container Engine Overview
