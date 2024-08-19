@@ -517,3 +517,16 @@ Expected output
   1. Static Inventory ( text file that needs to updated manually )
   2. Dynamic Inventory ( are execuables - python script )
 </pre>
+
+## Info - Ansible ad-hoc commands
+<pre>
+- helps us invoke a single ansible module
+- to understand how a module works before it can be used in Ansible Playbooks
+</pre>
+
+## Info - Ansible Playbook
+<pre>
+- is the automation script written in YAML format
+- follows a specific structure
+- invokes one to many ansible modules in specific order one after the other
+</pre>
