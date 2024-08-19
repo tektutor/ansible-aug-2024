@@ -5,10 +5,6 @@
 https://rpsconsulting116.examly.io/contest/public?U2FsdGVkX1+WjJEXq04xM/lciWVLN6joWtDhjlWS7ibqxdWFwKfQ/FRoXY9nzQxN3FWnDpIcjaJVatcRkL5g3A==  
 </pre>
 
-Those who wish to access the pre-test link directly, you may try 
-<pre>
-https://pad.riseup.net/p/ansible  
-</pre>  
 
 #### Things to note
 <pre>
