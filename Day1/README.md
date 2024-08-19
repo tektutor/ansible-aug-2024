@@ -311,7 +311,7 @@ docker inspect --format '{{.Name}}' $(docker ps -q)
 Expected output
 ![image](https://github.com/user-attachments/assets/966b3e14-11e8-4dc4-9e34-d16bb1130a15)
 
-## Lab - Deleting multiple running container forcibly
+## Lab - Deleting multiple running containers forcibly
 ```
 docker ps -a
 docker run -dit --name ubuntu1 --hostname ubuntu1 ubuntu:latest /bin/bash
