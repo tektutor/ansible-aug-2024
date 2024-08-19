@@ -486,3 +486,34 @@ Expected output
   - support User Management ( Role Based Access Control )
   - supports historical Ansible Playbook logs
 </pre>
+
+## Ansible Modules
+<pre>
+- Python scripts for Unix/Linux/Mac Ansibe Nodes
+- Powershell scripts for Windows Ansible Nodes
+- comes out of the box when we install Ansible
+</pre>
+
+## Info - Ansible Controller Machine ( ACM )
+<pre>
+- the machine where Ansible is installed is called Ansible Controller Machine
+- it can be any Linux distribution ( Ubuntu, Rocky Linux & RHEL ) 
+</pre>
+
+## Info - Ansible Nodes
+<pre>
+- are the machines that Ansible will perform configuration management
+- i.e installs softwares on the remote servers
+- Though ACM can be only a Linux machine, the Ansible Nodes can be Unix/Linux/Mac/Windows
+</pre>
+
+## Info - Ansible Inventory 
+<pre>
+- Ansible inventory has connection details to Unix/Linux/Mac/Windows Ansible Nodes
+- SSH connection details
+- WinRM connection details
+- login credentials, etc
+- are of two types
+  1. Static Inventory ( text file that needs to updated manually )
+  2. Dynamic Inventory ( are execuables - python script )
+</pre>
