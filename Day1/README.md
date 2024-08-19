@@ -80,7 +80,11 @@ Expected output
   - each container has its own network stack just like VMs
   - each container has its own file system just like VMs
   - each container has its own Port range ( 0 - 655535 ) just like VMs
-
+- client/server architecture
+- docker client
+  - is the software that we use to interact with docker engine 
+- docker server
+  - runs as a service in the background
 </pre>
 ## Info - Docker High-Level Architecture
 
