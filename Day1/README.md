@@ -548,3 +548,27 @@ ansible-doc - used to get help manuals about individual ansible modules
 ansible-galaxy - used to develop,download/install reusuable ansible roles
 ansible-vault - helps in securing login credentials or any sensitive information in encrypted format and use them within playbook securely
 </pre>
+
+## Lab - Building a custom ubuntu ansible node docker image
+```
+cd ~/ansible-aug-2024
+git pull
+cd Day1/CustomAnsibleNodeDockerImage/ubuntu
+cat Dockerfile
+```
+
+Let's generate a key-pair for rps user ( Hit enter 3 times accepting the defaults )
+```
+ssh-keygen
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/8f22b9ee-8f51-48aa-be8b-0f37e16fe8db)
+![image](https://github.com/user-attachments/assets/58da1410-7f8d-4322-b00a-a562b3685c2d)
+
+Let's copy the public key and save it as authorized_keys in the current directory
+```
+cd ~/ansible-aug-2024/Day1/CustomAnsibleNodeDockerImage/ubuntu
+cp ~/.ssh/id_rsa.pub authorized_keys
+ls -l
+```
