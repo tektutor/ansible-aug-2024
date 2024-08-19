@@ -10,6 +10,7 @@ https://rpsconsulting116.examly.io/contest/public?U2FsdGVkX1+WjJEXq04xM/lciWVLN6
 <pre>
 - Login to your RPS Cloud Lab machine with the credentials shared to you
 - While registering for pre-test, kindly use your personal email-id (avoid using BOFA id)
+- You will receive a verification email, once verification is done you will be able to proceed with pre-test
 - Once you are done with the pre-test, kindly notify me to proceed with the training
-- Copy/Past between your laptop and lab machine is disabled as per your bank policy
+- Copy/Paste between your laptop and lab machine is disabled as per your bank policy
 </pre>
