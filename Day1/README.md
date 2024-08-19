@@ -195,6 +195,7 @@ ubuntu:latest is the docker image
 </pre>
 Expected output
 ![image](https://github.com/user-attachments/assets/47c0e070-419a-4077-9288-33fba0feca8f)
+![image](https://github.com/user-attachments/assets/f4806b8d-b52d-41f1-9e08-f07190f43b18)
 
 
 Listing all the running containers ( try this from a different terminal window )
