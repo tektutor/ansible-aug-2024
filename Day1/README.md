@@ -166,3 +166,14 @@ Expected output
 ![image](https://github.com/user-attachments/assets/b267553e-4be3-4826-8f23-3fca3abef31e)
 ![image](https://github.com/user-attachments/assets/b86e0644-7489-4ffc-b038-b86e6c2e359f)
 ![image](https://github.com/user-attachments/assets/5acf9832-39be-4499-9d30-17c8e4ec0c42)
+
+## Lab - Deleting a docker image from local docker registry
+```
+docker images
+docker rmi bitnami/redis:latest
+docker images
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/dfbbc84e-dd2f-4b52-89bf-c4de330daadd)
+![image](https://github.com/user-attachments/assets/36df4180-6069-48e6-844c-2cc02ead79d5)
