@@ -115,6 +115,7 @@ Expected output
 - there are three types of Docker Registry
   1. Docker Local Registry
      - folder on your local system
+     - /var/lib/docker
   2. Docker Private Registry
      - is a server that is backed by Sonatype Nexus or JFrog Artifactory
   3. Docker Remote Registry
