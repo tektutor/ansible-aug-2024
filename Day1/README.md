@@ -121,3 +121,24 @@ Expected output
   3. Docker Remote Registry
      - is a website maintained by Docker Inc organization which has developed/maintainging Docker
 </pre>
+
+## Info - Container Runtime Overview
+<pre>
+- is a low-level software utility that is used to manage container images and containers
+- is not so user-friendly, hence end-users like us don't directly use the container runtime
+- examples
+  - runC is a Container Runtime
+  - CRI-O is a Container Rutnime
+</pre>
+
+## Info - Container Engine Overview
+<pre>
+- is a high-level software that is used to manage container images and containers
+- is very user-friendly
+  - without knowing a OS kernel level knowledge, one can easily manage images and containers using Container Engines
+- examples
+  - Docker is a Container Engine that depends on containerd which in turn depends on runC container runtime to manage images/containers
+  - Podman is a Container Engine that depends on CRI-O container runtime to manage images and containers
+- endusers like us, normally only use the Container Engines not the Container Runtime
+
+</pre>
