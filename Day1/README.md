@@ -281,3 +281,13 @@ docker ps
 
 Expected output
 ![image](https://github.com/user-attachments/assets/c8b86299-877a-4295-bf36-54b303262ea3)
+
+## Lab - Stopping multiple running containers with a single command
+```
+docker ps
+docker stop ubuntu3 ubuntu4
+docker ps -a
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/eb08fb73-4d6d-4a7b-867b-1ef937617ad6)
