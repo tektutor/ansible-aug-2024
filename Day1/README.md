@@ -611,6 +611,7 @@ Let's check if we are able to SSH into the ubuntu1 container without providing p
 ssh -p 2001 root@localhost
 exit
 ssh -p 2002 root@localhost
+exit
 ```
 
 Expected output
