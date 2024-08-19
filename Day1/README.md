@@ -65,8 +65,23 @@ Expected output
 
 ## Info - Hypervisor High-Level Architecture
 ![Hypervisor](HypervisorHighLevelArchitecture.png)
-## Info - Docker Overview
 
+## Info - Docker Overview
+<pre>
+- lightweight - application virtualization technology  
+- each container represents one application or an application component
+- each container is an application process
+- containers doesn't have its own OS Kernels
+- containerd don't get their own hardware resources
+- container don't represents an Operating System
+- container will never be able to replace virtual machines or Operating System
+- similarities between virtual machines and containers
+  - each container get's its own IP address just like VMs get their own IP address
+  - each container has its own network stack just like VMs
+  - each container has its own file system just like VMs
+  - each container has its own Port range ( 0 - 655535 ) just like VMs
+
+</pre>
 ## Info - Docker High-Level Architecture
 
 ## Info - Docker Image Overview
