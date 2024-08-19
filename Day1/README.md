@@ -243,4 +243,4 @@ docker ps -a
 ```
 
 Expected output
-![image](https://github.com/user-attachments/assets/d2b9fe9b-068c-4efc-832e-463b58007bfa)
+![image](https://github.com/user-attachments/assets/18c03acb-48f2-4beb-8a94-a6ac43104663)
