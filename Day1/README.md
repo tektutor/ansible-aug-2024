@@ -367,3 +367,208 @@ docker images
 
 Expected output
 ![image](https://github.com/user-attachments/assets/5b5f3615-8484-44e4-a2b5-4270976b04be)
+
+
+Creating a container using our custom docker image
+```
+docker run -dit --name c1 --hostname c1 tektutor/ubuntu:latest bash
+docker ps
+docker exec -it c1 bash
+ifconfig
+ping www.google.com
+tree
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/8cf7ac24-ed83-459b-920b-e0e4426fe946)
+![image](https://github.com/user-attachments/assets/061710a3-00cd-4056-81dd-56c2e8018935)
+
+## Info - Configuration Management Tool Overview
+<pre>
+- configuration management tool helps us automate the software installation/updates/upgrades/uninstallations
+- helps in automating user management
+- helps in provisioning Operating system in on-prem environment, public cloud
+- helps in automating any system administation activity
+- though configuration management tools supports some basic provisioning, provisioning is not the strength of configuration management
+- for provisioning a system, ideal tool we must consider is Vagrant, Cloudfromation(AWS), Terraform ( cloud neutral -works locally as well as on all public clouds )4
+- examples
+  - Puppet
+  - Chef
+  - Ansible
+</pre>
+
+## Info - Puppet
+<pre>
+- is a configuration management tool
+- developed by company name Perforce
+- this was the very first configuration management that came around year 2008
+- it uses a Puppet's proprietary Domain Specific Language(DSL) 
+  - DSL is the language in which the automation code is written
+- puppet follows client/server architecture
+- puppet follows pull based architecture
+- the servers managed by Puppet is called Puppet Nodes ( Windows, Unix/linux, Mac Servers )
+- in all the Puppet nodes, we need to install Puppet agents
+- the Puppet agents keeps polling the Puppet Server
+- the Puppet server will have all the automation scripts
+- we need to install puppets tools to develop the automation scripts on our laptop/desktop and we need to push the automation scripts to the Puppert server
+- it is the responsibility of the Puppet nodes ( puppet agent ) to detect new automation scripts on the puppet server, once it detects new scripts, the puppet agent downloads(pull) the automtion scripts and they run them locally on the respective puppet nodes and reports the status to the Puppet server
+</pre>
+
+
+## Chef Configuration Management Tool
+- requires 3 different types of machines
+  - Chef Server
+  - Chef Workstation
+  - Chef Nodes
+- Chef Nodes are the servers that we automate the software installations via Chef
+- Chef Nodes could be an Unix, Linux, Mac or Windows Machines, they can be even Cisco Router/Switches, any device that supports SSH/WinRM and supports Ruby & PowerShell(Windows)
+- Domain Specific Language(DSL) used is Ruby to automate configuration management
+- The automation code is referred as
+  - Recipe - invokes one or more Resources
+  - Cookbook - invokes one or more Recipes
+  - Role - invokes one or more Cookbooks
+  
+## Chef Server Overview 
+- Developed in Ruby and Erlang
+- Management Web Console - Web Interface
+- BookShelf - Stores Cookbooks
+- Nginx Load Balancer - all requests to Chef Server is routed via this Chreverse proxy server
+- Postgres Database - Chef Server's Data store
+- Cookbooks, Roles, Recipes are stored in Chef Server
+- Messages - Elastic Search ( supports API for Indexing and Searching )
+- Has built-in Service called chef-server-ctl - monitors and maintain all services in a desired state
+
+## Chef Workstation Overview
+- Chef client - applies cookbooks, roles, policies on workstation machine
+- Chef Inspec - testing and auditing your applications and infrastructure ( security compliance, policy, etc)
+- Chef Habitat - allows you to build and package your applications and deploy them anywhere
+- knife
+  - this is the tool we would use most of the time
+  - helps in uploading recipe, cookbooks, roles, etc
+  - helps in bootstrapping a Chef node
+  - helps in removing a node
+  - helps in running chef-client to force convergence
+- Test Kitchen and Cookstyle - Testing Tools
+
+## Chef Node Overview
+- These are servers managed by Chef Configuration Management Software
+- This can be an onprem server, virtual machine, an AWS ec2 instance, an Azure Virtual Machine, Network Switches/Routers, etc.,
+- Could be a Windows Server, Unix/Linux Server, Mac OS-X
+- chef-client
+  - is a Chef agent that pulls cookbooks, roles from server and runs them on the machine they are running
+  - by default runs as a stand-alone tool, but we can configure it to run as a service, daemon, cronjob that runs periodically 
+
+
+## Info - Ansible
+<pre>
+- Ansible is a configuration management tool that came after Chef and Puppet
+- is agentless ( doesn't follow client/server architecture)
+- no proprietary tools need to be installed in Ansible Nodes
+- Ansible Nodes are the servers where software installation automation must be done
+- ansible nodes can be 
+  - windows server
+  - unix/linux/mac server
+- the ansible configuration management tool can only be installed on linux distributions only
+  - but it works in unix/mac
+- it comes in 2 flavours
+  1. Ansible Core
+  - opensource
+  - command-line only
+  - developed in Python language by Michael Deehan
+  - Michael Deehan - he was former employee of Red Hat
+  - DSL used is YAML ( Yet Another Markup Language )
+  2. Ansible Tower
+  - an enterprise product from Red Hat
+  - developed on top of opensource ansible core
+  - Red Hat acquired Ansible Inc ( the company that developed Ansible Core )
+  - Red Hat got acquired by IBM
+  - supports Webconsole
+  - support User Management ( Role Based Access Control )
+  - supports historical Ansible Playbook logs
+</pre>
+
+## Ansible Modules
+<pre>
+- Python scripts for Unix/Linux/Mac Ansibe Nodes
+- Powershell scripts for Windows Ansible Nodes
+- comes out of the box when we install Ansible
+</pre>
+
+## Info - Ansible Controller Machine ( ACM )
+<pre>
+- the machine where Ansible is installed is called Ansible Controller Machine
+- it can be any Linux distribution ( Ubuntu, Rocky Linux & RHEL ) 
+</pre>
+
+## Info - Ansible Nodes
+<pre>
+- are the machines that Ansible will perform configuration management
+- i.e installs softwares on the remote servers
+- Though ACM can be only a Linux machine, the Ansible Nodes can be Unix/Linux/Mac/Windows
+</pre>
+
+## Info - Ansible Inventory 
+<pre>
+- Ansible inventory has connection details to Unix/Linux/Mac/Windows Ansible Nodes
+- SSH connection details
+- WinRM connection details
+- login credentials, etc
+- are of two types
+  1. Static Inventory ( text file that needs to updated manually )
+  2. Dynamic Inventory ( are execuables - python script )
+</pre>
+
+## Info - Ansible ad-hoc commands
+<pre>
+- helps us invoke a single ansible module
+- to understand how a module works before it can be used in Ansible Playbooks
+</pre>
+
+## Info - Ansible Playbook
+<pre>
+- is the automation script written in YAML format
+- follows a specific structure
+- invokes one to many ansible modules in specific order one after the other
+</pre>
+
+## Lab - Checking ansible core version installed in our Ubuntu lab machine
+```
+ansible --version
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/dd4bc117-f94e-454c-9d7f-9c9e9a06f34e)
+![image](https://github.com/user-attachments/assets/7505fe45-7a87-4006-9589-570823294851)
+
+## Info - Ansible tools
+<pre>
+ansible - used to run ansible ad-hoc commands
+ansible-playbook - used to run ansible playbooks
+ansible-doc - used to get help manuals about individual ansible modules
+ansible-galaxy - used to develop,download/install reusuable ansible roles
+ansible-vault - helps in securing login credentials or any sensitive information in encrypted format and use them within playbook securely
+</pre>
+
+## Lab - Building a custom ubuntu ansible node docker image
+```
+cd ~/ansible-aug-2024
+git pull
+cd Day1/CustomAnsibleNodeDockerImage/ubuntu
+cat Dockerfile
+```
+
+Let's generate a key-pair for rps user ( Hit enter 3 times accepting the defaults )
+```
+ssh-keygen
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/8f22b9ee-8f51-48aa-be8b-0f37e16fe8db)
+![image](https://github.com/user-attachments/assets/58da1410-7f8d-4322-b00a-a562b3685c2d)
+
+Let's copy the public key and save it as authorized_keys in the current directory
+```
+cd ~/ansible-aug-2024/Day1/CustomAnsibleNodeDockerImage/ubuntu
+cp ~/.ssh/id_rsa.pub authorized_keys
+ls -l
+```
