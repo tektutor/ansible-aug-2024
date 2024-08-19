@@ -478,6 +478,11 @@ Expected output
   - Michael Deehan - he was former employee of Red Hat
   - DSL used is YAML ( Yet Another Markup Language )
   2. Ansible Tower
-  - enterprise product
+  - an enterprise product from Red Hat
   - developed on top of opensource ansible core
+  - Red Hat acquired Ansible Inc ( the company that developed Ansible Core )
+  - Red Hat got acquired by IBM
+  - supports Webconsole
+  - support User Management ( Role Based Access Control )
+  - supports historical Ansible Playbook logs
 </pre>
