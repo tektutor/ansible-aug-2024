@@ -102,6 +102,12 @@ Expected output
 </pre>
 
 ## Info - Docker Container Overview
+<pre>
+- is an instance of a Docker Image
+- is an running instance of an application
+- it get's an unique name and ID
+- it get's a Private IP by default
+</pre>  
 
 ## Info - Docker Registry
 <pre>
