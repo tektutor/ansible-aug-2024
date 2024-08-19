@@ -415,12 +415,49 @@ Expected output
 </pre>
 
 
-## Info - Chef 
-<pre>
-- Chef is configuration management tools that came after Puppet
-- Chef uses a Ruby scripting language as the Domain Specific Language (DSL)
-- 
-</pre>
+## Chef Configuration Management Tool
+- requires 3 different types of machines
+  - Chef Server
+  - Chef Workstation
+  - Chef Nodes
+- Chef Nodes are the servers that we automate the software installations via Chef
+- Chef Nodes could be an Unix, Linux, Mac or Windows Machines, they can be even Cisco Router/Switches, any device that supports SSH/WinRM and supports Ruby & PowerShell(Windows)
+- Domain Specific Language(DSL) used is Ruby to automate configuration management
+- The automation code is referred as
+  - Recipe - invokes one or more Resources
+  - Cookbook - invokes one or more Recipes
+  - Role - invokes one or more Cookbooks
+  
+## Chef Server Overview 
+- Developed in Ruby and Erlang
+- Management Web Console - Web Interface
+- BookShelf - Stores Cookbooks
+- Nginx Load Balancer - all requests to Chef Server is routed via this Chreverse proxy server
+- Postgres Database - Chef Server's Data store
+- Cookbooks, Roles, Recipes are stored in Chef Server
+- Messages - Elastic Search ( supports API for Indexing and Searching )
+- Has built-in Service called chef-server-ctl - monitors and maintain all services in a desired state
+
+## Chef Workstation Overview
+- Chef client - applies cookbooks, roles, policies on workstation machine
+- Chef Inspec - testing and auditing your applications and infrastructure ( security compliance, policy, etc)
+- Chef Habitat - allows you to build and package your applications and deploy them anywhere
+- knife
+  - this is the tool we would use most of the time
+  - helps in uploading recipe, cookbooks, roles, etc
+  - helps in bootstrapping a Chef node
+  - helps in removing a node
+  - helps in running chef-client to force convergence
+- Test Kitchen and Cookstyle - Testing Tools
+
+## Chef Node Overview
+- These are servers managed by Chef Configuration Management Software
+- This can be an onprem server, virtual machine, an AWS ec2 instance, an Azure Virtual Machine, Network Switches/Routers, etc.,
+- Could be a Windows Server, Unix/Linux Server, Mac OS-X
+- chef-client
+  - is a Chef agent that pulls cookbooks, roles from server and runs them on the machine they are running
+  - by default runs as a stand-alone tool, but we can configure it to run as a service, daemon, cronjob that runs periodically 
+
 
 ## Info - Ansible
 <pre>
