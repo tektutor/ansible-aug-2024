@@ -367,3 +367,18 @@ docker images
 
 Expected output
 ![image](https://github.com/user-attachments/assets/5b5f3615-8484-44e4-a2b5-4270976b04be)
+
+
+Creating a container using our custom docker image
+```
+docker run -dit --name c1 --hostname c1 tektutor/ubuntu:latest bash
+docker ps
+docker exec -it c1 bash
+ifconfig
+ping www.google.com
+tree
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/8cf7ac24-ed83-459b-920b-e0e4426fe946)
+![image](https://github.com/user-attachments/assets/061710a3-00cd-4056-81dd-56c2e8018935)
