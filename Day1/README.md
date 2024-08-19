@@ -591,3 +591,29 @@ docker images
 Expected output
 ![image](https://github.com/user-attachments/assets/59833e52-9252-4937-b844-0a73ff8a4460)
 ![image](https://github.com/user-attachments/assets/b6b7966f-a979-451f-9523-546a457b39df)
+
+## Lab - Creating two ansible ubuntu node containers
+Let's delete existing containers
+```
+docker rm -f $(docker ps -aq)
+docker ps -a
+```
+
+Let's create the ubuntu1 and ubuntu2 containers using our custom ansible ubuntu docker image
+```
+docker run -d --name ubuntu1 --hostname ubuntu1 -p 2001:22 -p 8001:80 tektutor/ubuntu-ansible-node:latest
+docker run -d --name ubuntu2 --hostname ubuntu2 -p 2002:22 -p 8002:80 tektutor/ubuntu-ansible-node:latest
+docker ps
+```
+
+Let's check if we are able to SSH into the ubuntu1 container without providing password
+```
+ssh -p 2001 root@localhost
+exit
+ssh -p 2002 root@localhost
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/fe424d3c-db10-4244-aaed-a1063a1a95d2)
+![image](https://github.com/user-attachments/assets/23f33808-8c79-4fd2-8e0a-ee6aee3388d8)
+![image](https://github.com/user-attachments/assets/552fa47f-1a35-4ac7-a406-99c22501f55a)
