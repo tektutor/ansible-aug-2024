@@ -69,6 +69,10 @@ Expected output
 ## Info - Docker Overview
 <pre>
 - lightweight - application virtualization technology  
+- Docker is developed in Golang by a company called Docker Inc
+- Docker comes in 2 flavours
+  1. Docker Community Edition - Docker CE ( Free )
+  2. Docker Enteprise Edition - Docker EE ( Paid software )
 - each container represents one application or an application component
 - each container is an application process
 - containers doesn't have its own OS Kernels
@@ -90,7 +94,23 @@ Expected output
 ![Docker](DockerHighLevelArchitecture.png)
 
 ## Info - Docker Image Overview
+<pre>
+- is a template/blueprint/specification of a docker container
+- Docker image is similar to windows-11-dvd.iso file
+- Just like using windows dvd iso, we install windows 11 on multiples laptops/desktops, same way using docker image we can create multiple container instances
+- Docker Images are stored inside Docker Registry
+</pre>
 
 ## Info - Docker Container Overview
 
 ## Info - Docker Registry
+<pre>
+- is a collection of many Docker Images
+- there are three types of Docker Registry
+  1. Docker Local Registry
+     - folder on your local system
+  2. Docker Private Registry
+     - is a server that is backed by Sonatype Nexus or JFrog Artifactory
+  3. Docker Remote Registry
+     - is a website maintained by Docker Inc organization which has developed/maintainging Docker
+</pre>
