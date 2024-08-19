@@ -233,3 +233,14 @@ docker ps -a
 
 Expected output
 ![image](https://github.com/user-attachments/assets/86cb91e7-b062-4d79-be80-a3fd812e969a)
+
+## Lab - Deleting an exited container
+```
+docker ps -a
+docker rm ubuntu1
+docker rm ubuntu2
+docker ps -a
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/d2b9fe9b-068c-4efc-832e-463b58007bfa)
