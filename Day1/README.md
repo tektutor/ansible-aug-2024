@@ -154,3 +154,15 @@ docker images
 Expected output
 ![image](https://github.com/user-attachments/assets/7aa82daf-98e3-4cbe-a131-73126b8f1ae4)
 ![image](https://github.com/user-attachments/assets/c5f0b36a-3945-4bbc-ba62-a7a170269e48)
+
+## Lab - Downloading docker image from Docker Hub Remote registry to local docker registry
+```
+docker images
+docker pull bitnami/redis:latest
+docker images
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/b267553e-4be3-4826-8f23-3fca3abef31e)
+![image](https://github.com/user-attachments/assets/b86e0644-7489-4ffc-b038-b86e6c2e359f)
+![image](https://github.com/user-attachments/assets/5acf9832-39be-4499-9d30-17c8e4ec0c42)
