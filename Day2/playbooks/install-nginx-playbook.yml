@@ -4,16 +4,43 @@
   - my-nginx-vars.yml 
   tasks:
   - name: Install nginx web server in Ubuntu ansible nodes
+    when: ansible_distribution == "Ubuntu" 
     apt: name=nginx state=latest update_cache=yes
 
+  - name: Install Extra Packages for Enterprise Linux (EPEL) 
+    when: ansible_distribution == "Rocky"
+    yum: name=epel-release state=latest 
+
+  - name: Install nginx web server in Rocky ansible nodes
+    when: ansible_distribution == "Rocky"
+    yum: name=nginx state=latest 
+
   - name: Start the nginx web server in Ubuntu ansible nodes
+    when: ansible_distribution == "Ubuntu" 
     service: name=nginx state=started 
+
+  - name: Check if nginx web server is already running in Rocky ansible nodes
+    when: ansible_distribution == "Rocky"
+    shell: curl localhost
+    register: output
+    ignore_errors: yes
+
+  - debug: var=output
+
+  - name: Start the nginx web server in Rocky ansible nodes
+    when: ansible_distribution == "Rocky" and output.rc != 0
+    shell: nginx 
 
   - name: Create the custom folder to store our custom web page
     file: path=/var/html mode=0777 state=directory
 
-  - name: Configure nginx web server to pick html page from our custom folder
+  - name: Configure nginx web server to pick html page from our custom folder in Ubuntu
+    when: ansible_distribution == "Ubuntu" 
     copy: src=default dest=/etc/nginx/sites-available/default 
+
+  - name: Configure nginx web server to pick html page from our custom folder in Rocky
+    when: ansible_distribution == "Rocky"
+    copy: src=nginx.conf dest=/etc/nginx/nginx.conf
 
   - name: Retrieve IP address of the ansible node
     shell: hostname -i
@@ -24,16 +51,24 @@
   - name: Deploy our custom web page in Ubuntu ansible nodes
     template: src=index.html dest=/var/html/index.html
 
-  - name: Restart nginx web server to apply config changes
+  - name: Restart nginx web server to apply config changes in Ubuntu
+    when: ansible_distribution == "Ubuntu" 
     service: name=nginx state=restarted
 
+  - name: Stop nginx web server to apply config changes in Rocky
+    when: ansible_distribution == "Rocky"
+    shell: nginx -s stop
+
+  - name: Start nginx web server to apply config changes in Rocky
+    when: ansible_distribution == "Rocky"
+    shell: nginx
 
 - name: Test if the nginx web page is accessible
   hosts: localhost
   tasks:
   - name: See if you can access the web page
     shell: "curl http://localhost:8{{item}}"
-    with_sequence: start=1 end=2 format="%03d"
+    with_sequence: start=1 end=4 format="%03d"
     register: output
 
   - debug: var=output
