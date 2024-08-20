@@ -144,6 +144,51 @@ Expected output
 ![image](https://github.com/user-attachments/assets/49b00485-af7d-40e5-804b-c2b6dec0c0d6)
 
 ## Lab - Using ansible.cfg and installing nginx web server into ansible nodes
+The playbook looks as shown below
+<pre>
+- name: This playbook will install nginx web server, configures nginx web server to pick custom web page from a custom folder 
+  hosts: all
+  vars:
+  - provisioner_tool: Docker
+  - conf_mgr_tool: Ansible
+  tasks:
+  - name: Install nginx web server in Ubuntu ansible nodes
+    apt: name=nginx state=latest update_cache=yes
+
+  - name: Start the nginx web server in Ubuntu ansible nodes
+    service: name=nginx state=started 
+
+  - name: Create the custom folder to store our custom web page
+    file: path=/var/html mode=0777 state=directory
+
+  - name: Configure nginx web server to pick html page from our custom folder
+    copy: src=default dest=/etc/nginx/sites-available/default 
+
+  - name: Retrieve IP address of the ansible node
+    shell: hostname -i
+    register: ipaddr
+
+  - debug: var=ipaddr
+
+  - name: Deploy our custom web page in Ubuntu ansible nodes
+    template: src=index.html dest=/var/html/index.html
+
+  - name: Restart nginx web server to apply config changes
+    service: name=nginx state=restarted
+
+
+- name: Test if the nginx web page is accessible
+  hosts: localhost
+  tasks:
+  - name: See if you can access the web page
+    shell: "curl http://localhost:8{{item}}"
+    with_sequence: start=1 end=2 format="%03d"
+    register: output
+
+  - debug: var=output  
+</pre>
+
+You may try executing the playbook as shown below
 ```
 cd ~/ansible-aug-2024
 git pull
