@@ -17,7 +17,7 @@
     copy: src=default dest=/etc/nginx/sites-available/default 
 
   - name: Deploy our custom web page in Ubuntu ansible nodes
-    copy: src=index.html dest=/var/html/index.html
+    template: src=index.html dest=/var/html/index.html
 
   - name: Restart nginx web server to apply config changes
     service: name=nginx state=restarted
