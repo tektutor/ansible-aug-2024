@@ -140,6 +140,17 @@ cd Day2/playbooks/loops
 ansible-playbook -i hosts dictionary-playbook.yml
 ```
 
-
 Expected output
 ![image](https://github.com/user-attachments/assets/49b00485-af7d-40e5-804b-c2b6dec0c0d6)
+
+## Lab - Using ansible.cfg and installing nginx web server into ansible nodes
+```
+cd ~/ansible-aug-2024
+git pull
+cd Day2/playbooks
+cat install-nginx-playbook.yml
+ansible-playbook install-nginx-playbook.yml
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/9b383587-d91a-45d2-94f4-e371cb23e57c)
