@@ -148,9 +148,8 @@ The playbook looks as shown below
 <pre>
 - name: This playbook will install nginx web server, configures nginx web server to pick custom web page from a custom folder 
   hosts: all
-  vars:
-  - provisioner_tool: Docker
-  - conf_mgr_tool: Ansible
+  vars_files:
+  - my-nginx-vars.yml 
   tasks:
   - name: Install nginx web server in Ubuntu ansible nodes
     apt: name=nginx state=latest update_cache=yes
@@ -185,7 +184,7 @@ The playbook looks as shown below
     with_sequence: start=1 end=2 format="%03d"
     register: output
 
-  - debug: var=output  
+  - debug: var=output
 </pre>
 
 You may try executing the playbook as shown below
