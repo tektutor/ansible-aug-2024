@@ -108,3 +108,15 @@ Expected output
 ![image](https://github.com/user-attachments/assets/8674658f-5a8c-42d7-af84-869c5f9235e4)
 ![image](https://github.com/user-attachments/assets/bfc138d2-dc07-4c03-b240-bc60e6e05f07)
 ![image](https://github.com/user-attachments/assets/61fa381c-b642-4cb7-93d5-89b6aac0076a)
+
+## Lab - Using list variable in ansible playbook
+```
+cd ~/ansible-aug-2024
+git pull
+cd Day2/playbooks/loops
+ansible-playbook -i hosts install-basictools-playbook.yml
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/4ac6edb5-0110-4d80-b600-7e2a38288b4f)
+![image](https://github.com/user-attachments/assets/9b0f5d58-cbd3-4fc1-8b7c-e19e9553b45c)
