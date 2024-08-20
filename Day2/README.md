@@ -1,5 +1,16 @@
 # Day 2
 
+## Info - Commonly used Ansible modules ( Popular ones )
+<pre>
+- apt
+- yum
+- file
+- shell
+- service
+- copy
+- template
+</pre>
+
 ## Lab - Running your first Ansible ad-hoc command (ping)
 ```
 cd ~/ansible-aug-2024
