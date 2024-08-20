@@ -265,3 +265,16 @@ Expected output
 ![image](https://github.com/user-attachments/assets/4daf23a7-520f-4eae-9732-57709872649e)
 ![image](https://github.com/user-attachments/assets/1dd6bc3e-ef29-4e63-8a0a-71f88daac6ea)
 
+
+## Lab - Running the install nginx playbook on both ubuntu and rocky linux ansible nodes
+```
+cd ~/ansible-aug-2024
+git pull
+cd Day2/playbooks
+ansible-playbook install-nginx-playbook.yml
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/04d09dcb-306e-4a87-8dc9-dfa3abe2d0b2)
+![image](https://github.com/user-attachments/assets/d30fc85d-b356-4072-9340-000075cf90b1)
+![image](https://github.com/user-attachments/assets/56cfbca8-b4c3-4268-b825-6c5784fe3eb9)
