@@ -120,3 +120,15 @@ ansible-playbook -i hosts install-basictools-playbook.yml
 Expected output
 ![image](https://github.com/user-attachments/assets/4ac6edb5-0110-4d80-b600-7e2a38288b4f)
 ![image](https://github.com/user-attachments/assets/9b0f5d58-cbd3-4fc1-8b7c-e19e9553b45c)
+
+## Lab - Using dictionary variable in ansible playbook
+```
+cd ~/ansible-aug-2024
+git pull
+cd Day2/playbooks/loops
+ansible-playbook -i hosts dictionary-playbook.yml
+```
+
+
+Expected output
+![image](https://github.com/user-attachments/assets/49b00485-af7d-40e5-804b-c2b6dec0c0d6)
