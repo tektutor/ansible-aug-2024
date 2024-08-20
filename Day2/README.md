@@ -1,5 +1,16 @@
 # Day 2
 
+## Info - Commonly used Ansible modules ( Popular ones )
+<pre>
+- apt
+- yum
+- file
+- shell
+- service
+- copy
+- template
+</pre>
+
 ## Lab - Running your first Ansible ad-hoc command (ping)
 ```
 cd ~/ansible-aug-2024
@@ -120,3 +131,33 @@ ansible-playbook -i hosts install-basictools-playbook.yml
 Expected output
 ![image](https://github.com/user-attachments/assets/4ac6edb5-0110-4d80-b600-7e2a38288b4f)
 ![image](https://github.com/user-attachments/assets/9b0f5d58-cbd3-4fc1-8b7c-e19e9553b45c)
+
+## Lab - Using dictionary variable in ansible playbook
+```
+cd ~/ansible-aug-2024
+git pull
+cd Day2/playbooks/loops
+ansible-playbook -i hosts dictionary-playbook.yml
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/49b00485-af7d-40e5-804b-c2b6dec0c0d6)
+
+## Lab - Using ansible.cfg and installing nginx web server into ansible nodes
+```
+cd ~/ansible-aug-2024
+git pull
+cd Day2/playbooks
+cat install-nginx-playbook.yml
+ansible-playbook install-nginx-playbook.yml
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/9b383587-d91a-45d2-94f4-e371cb23e57c)
+![image](https://github.com/user-attachments/assets/6b6632da-c12c-4af8-b23f-57f1423ef7a0)
+![image](https://github.com/user-attachments/assets/27d59b88-c2c9-4251-8be3-15e212d469ac)
+![image](https://github.com/user-attachments/assets/43cdfdad-b93c-4860-a8de-267d16f363ed)
+![image](https://github.com/user-attachments/assets/64551243-ad89-4fb8-9abd-9a4fe3650bb8)
+![image](https://github.com/user-attachments/assets/5c4f1490-abb9-401f-a72f-be5209d8638f)
+![image](https://github.com/user-attachments/assets/b01ca5e6-c3b2-4e5e-874a-c2a6a3943969)
+![image](https://github.com/user-attachments/assets/892c8dc4-bc29-45e2-97a3-25bafb1db3fb)
