@@ -30,3 +30,11 @@ ansible -i inventory all -m ping -vvvv > output.yml 2>&1
 6. Captures the output of ping.py execution on the remote ubuntu1 and ubuntu2, removes the temp directory that was created earlier
 7. On the ACM machine, gives a summary of the output(status) of ping ad-hoc command
 </pre>
+
+## Lab - Listing all the ansible modules supported by your ansible version
+```
+ansible-doc -l
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/6f1201ce-994a-4720-890c-c49e12e8f56c)
