@@ -38,3 +38,16 @@ ansible-doc -l
 
 Expected output
 ![image](https://github.com/user-attachments/assets/6f1201ce-994a-4720-890c-c49e12e8f56c)
+
+
+## Lab - Finding machine facts
+```
+cd ~/ansible-aug-2024
+git pull
+cd Day2/static-inventory
+ansible -i inventory ubuntu1 -m setup
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/a1d8e343-6744-4cd8-afa5-8ee204e55270)
+![image](https://github.com/user-attachments/assets/c3e86d20-5689-4d55-aebe-d90985bf039e)
