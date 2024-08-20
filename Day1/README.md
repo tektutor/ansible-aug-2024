@@ -415,7 +415,7 @@ Expected output
 </pre>
 
 
-## Chef Configuration Management Tool
+## Info - Chef Configuration Management Tool
 - requires 3 different types of machines
   - Chef Server
   - Chef Workstation
@@ -428,7 +428,7 @@ Expected output
   - Cookbook - invokes one or more Recipes
   - Role - invokes one or more Cookbooks
   
-## Chef Server Overview 
+## Info - Chef Server Overview 
 - Developed in Ruby and Erlang
 - Management Web Console - Web Interface
 - BookShelf - Stores Cookbooks
@@ -438,7 +438,7 @@ Expected output
 - Messages - Elastic Search ( supports API for Indexing and Searching )
 - Has built-in Service called chef-server-ctl - monitors and maintain all services in a desired state
 
-## Chef Workstation Overview
+## Info- Chef Workstation Overview
 - Chef client - applies cookbooks, roles, policies on workstation machine
 - Chef Inspec - testing and auditing your applications and infrastructure ( security compliance, policy, etc)
 - Chef Habitat - allows you to build and package your applications and deploy them anywhere
@@ -450,7 +450,7 @@ Expected output
   - helps in running chef-client to force convergence
 - Test Kitchen and Cookstyle - Testing Tools
 
-## Chef Node Overview
+## Info - Chef Node Overview
 - These are servers managed by Chef Configuration Management Software
 - This can be an onprem server, virtual machine, an AWS ec2 instance, an Azure Virtual Machine, Network Switches/Routers, etc.,
 - Could be a Windows Server, Unix/Linux Server, Mac OS-X
@@ -549,6 +549,14 @@ ansible-galaxy - used to develop,download/install reusuable ansible roles
 ansible-vault - helps in securing login credentials or any sensitive information in encrypted format and use them within playbook securely
 </pre>
 
+## Lab - Installing ansible core in Ubuntu
+```
+sudo apt update
+sudo apt install software-properties-common
+sudo add-apt-repository --yes --update ppa:ansible/ansible
+sudo apt install ansible -y
+```
+
 ## Lab - Building a custom ubuntu ansible node docker image
 ```
 cd ~/ansible-aug-2024
@@ -572,3 +580,48 @@ cd ~/ansible-aug-2024/Day1/CustomAnsibleNodeDockerImage/ubuntu
 cp ~/.ssh/id_rsa.pub authorized_keys
 ls -l
 ```
+
+Let's build our custom ansible ubuntu node docker image
+```
+cd ~/ansible-aug-2024/Day1/CustomAnsibleNodeDockerImage/ubuntu
+docker build -t tektutor/ubuntu-ansible-node:latest .
+docker images
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/59833e52-9252-4937-b844-0a73ff8a4460)
+![image](https://github.com/user-attachments/assets/b6b7966f-a979-451f-9523-546a457b39df)
+
+## Lab - Creating two ansible ubuntu node containers
+Let's delete existing containers
+```
+docker rm -f $(docker ps -aq)
+docker ps -a
+```
+
+Let's create the ubuntu1 and ubuntu2 containers using our custom ansible ubuntu docker image
+```
+docker run -d --name ubuntu1 --hostname ubuntu1 -p 2001:22 -p 8001:80 tektutor/ubuntu-ansible-node:latest
+docker run -d --name ubuntu2 --hostname ubuntu2 -p 2002:22 -p 8002:80 tektutor/ubuntu-ansible-node:latest
+docker ps
+```
+
+Let's check if we are able to SSH into the ubuntu1 container without providing password
+```
+ssh -p 2001 root@localhost
+exit
+ssh -p 2002 root@localhost
+exit
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/fe424d3c-db10-4244-aaed-a1063a1a95d2)
+![image](https://github.com/user-attachments/assets/23f33808-8c79-4fd2-8e0a-ee6aee3388d8)
+![image](https://github.com/user-attachments/assets/552fa47f-1a35-4ac7-a406-99c22501f55a)
+![image](https://github.com/user-attachments/assets/82b4b75a-0748-457e-8314-fccd6bbb9225)
+
+
+## First day feedback
+<pre>
+https://survey.zohopublic.com/zs/3SDHLd  
+</pre>
