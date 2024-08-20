@@ -148,9 +148,8 @@ The playbook looks as shown below
 <pre>
 - name: This playbook will install nginx web server, configures nginx web server to pick custom web page from a custom folder 
   hosts: all
-  vars:
-  - provisioner_tool: Docker
-  - conf_mgr_tool: Ansible
+  vars_files:
+  - my-nginx-vars.yml 
   tasks:
   - name: Install nginx web server in Ubuntu ansible nodes
     apt: name=nginx state=latest update_cache=yes
@@ -185,7 +184,7 @@ The playbook looks as shown below
     with_sequence: start=1 end=2 format="%03d"
     register: output
 
-  - debug: var=output  
+  - debug: var=output
 </pre>
 
 You may try executing the playbook as shown below
@@ -217,3 +216,37 @@ Expected output
 ![image](https://github.com/user-attachments/assets/a0441bea-c3be-43f5-a3ba-488fb156e217)
 ![image](https://github.com/user-attachments/assets/20254de9-a418-45ed-ac22-f6cb6ac96a31)
 
+## Lab - Building a rockylinux custom ansible node docker image
+```
+cd ~/ansible-aug-2024
+git pull
+cd Day2/CustomAnsibleNodeDockerImage/rockylinux
+cat Dockerfile
+cp ~/.ssh/id_rsa.pub authorized_keys
+docker build -t tektutor/rockylinux:latest .
+docker images
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/f6cd5ac5-95db-4d45-9478-bce9c7f22cb1)
+![image](https://github.com/user-attachments/assets/8a82e41b-a695-40ff-a71e-f9691541b1db)
+![image](https://github.com/user-attachments/assets/d6cb5072-a520-42c5-b76b-bd504255b7e5)
+
+Let's create couple of rocky linux ansible node containers
+```
+docker run -d --name rocky1 --hostname rocky1 -p 2003:22 -p 8003:80 tektutor/rockylinux:latest
+docker run -d --name rocky2 --hostname rocky2 -p 2004:22 -p 8004:80 tektutor/rockylinux:latest
+docker ps
+```
+
+Let's see if we can ssh into the rocky1 and rocky2 containers without password
+```
+ssh -p 2003 root@localhost
+exit
+ssh -p 2004 root@localhost
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/4bb6221a-ab59-4482-9f1d-6733c7396b3a)
+![image](https://github.com/user-attachments/assets/c3d44e92-7fe4-4b78-ab5f-6a329569f945)
+![image](https://github.com/user-attachments/assets/500bd91b-7ed3-41fb-9900-d231113e4b15)
