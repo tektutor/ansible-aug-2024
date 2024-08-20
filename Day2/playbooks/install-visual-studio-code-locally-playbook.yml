@@ -1,0 +1,7 @@
+- name: This playbook will install visual studio code editor on our local machine
+  hosts: localhost
+  become: yes
+  tasks:
+  - name: Install visual studio code editor
+    shell: "./install-vscode.sh" 
+
