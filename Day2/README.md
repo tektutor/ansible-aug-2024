@@ -244,6 +244,7 @@ Let's see if we can ssh into the rocky1 and rocky2 containers without password
 ssh -p 2003 root@localhost
 exit
 ssh -p 2004 root@localhost
+exit
 ```
 
 Expected output
