@@ -254,7 +254,7 @@ Expected output
 
 ## Lab - See if you can ansible ping the rocky ansible node containers
 ```
-cd ~/ansible-aug-2023
+cd ~/ansible-aug-2024
 git pull
 cd Day2/playbooks
 cat hosts
