@@ -1,0 +1,11 @@
+- name: This playbook demonstrates using dictionary variable
+  hosts: localhost
+  vars:
+  - tools_path:
+      jdk_home: /usr/lib/jdk
+      maven_home: /usr/share/maven
+
+  tasks:
+  - name: Loop the dictionary variable and print the key value pairs
+    debug: msg="{{item.key}} {{item.value}}"
+    with_dict: "{{tools_path}}"
