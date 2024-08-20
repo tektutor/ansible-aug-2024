@@ -1,0 +1,14 @@
+- name: This play will install vim, tree, git, iputils-ping, net-tools in the ansible nodes
+  hosts: all
+  vars:
+  - software_tools:
+    - vim
+    - tree
+    - git
+    - iputils-ping
+    - net-tools
+  tasks:
+  - name: Install software tools from a list variable 
+    apt: name={{item}} state=latest update_cache=yes
+    with_items: "{{software_tools}}"
+
