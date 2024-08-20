@@ -1,0 +1,17 @@
+- name: This play will install vim, tree, git, iputils-ping, net-tools in the ansible nodes
+  hosts: all
+  tasks:
+  - name: Install vim editor
+    apt: name=vim state=latest update_cache=yes
+
+  - name: Install tree utility
+    apt: name=tree state=latest update_cache=yes
+
+  - name: Install git tool
+    apt: name=git state=latest update_cache=yes
+
+  - name: Install iputils-ping
+    apt: name=iputils-ping state=latest update_cache=yes
+
+  - name: Install net-tools 
+    apt: name=net-tools state=latest update_cache=yes 
