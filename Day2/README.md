@@ -251,3 +251,17 @@ Expected output
 ![image](https://github.com/user-attachments/assets/4bb6221a-ab59-4482-9f1d-6733c7396b3a)
 ![image](https://github.com/user-attachments/assets/c3d44e92-7fe4-4b78-ab5f-6a329569f945)
 ![image](https://github.com/user-attachments/assets/500bd91b-7ed3-41fb-9900-d231113e4b15)
+
+## Lab - See if you can ansible ping the rocky ansible node containers
+```
+cd ~/ansible-aug-2023
+git pull
+cd Day2/playbooks
+cat hosts
+ansible all -m ping
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/4daf23a7-520f-4eae-9732-57709872649e)
+![image](https://github.com/user-attachments/assets/1dd6bc3e-ef29-4e63-8a0a-71f88daac6ea)
+
