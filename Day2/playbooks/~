@@ -7,6 +7,5 @@
 		<h3>Provisioned by {{provisioner_tool}}</h3>
 		<h3>Configured by {{conf_mgr_tool}}</h3>
 		<h3>Hostname - {{ansible_hostname}}</h3>
-		<h3>IP Address - {{ipaddr.stdout}}</h3>
 	</body>
 </html>

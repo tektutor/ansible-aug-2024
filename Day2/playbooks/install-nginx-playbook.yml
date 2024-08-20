@@ -1,8 +1,7 @@
 - name: This playbook will install nginx web server, configures nginx web server to pick custom web page from a custom folder 
   hosts: all
-  vars:
-  - provisioner_tool: Docker
-  - conf_mgr_tool: Ansible
+  vars_files:
+  - my-nginx-vars.yml 
   tasks:
   - name: Install nginx web server in Ubuntu ansible nodes
     apt: name=nginx state=latest update_cache=yes
@@ -15,6 +14,12 @@
 
   - name: Configure nginx web server to pick html page from our custom folder
     copy: src=default dest=/etc/nginx/sites-available/default 
+
+  - name: Retrieve IP address of the ansible node
+    shell: hostname -i
+    register: ipaddr
+
+  - debug: var=ipaddr
 
   - name: Deploy our custom web page in Ubuntu ansible nodes
     template: src=index.html dest=/var/html/index.html

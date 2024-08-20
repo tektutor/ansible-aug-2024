@@ -1,7 +1,7 @@
 FROM oraclelinux:9
 MAINTAINER Jeganathan Swaminathan <jegan@tektutor.org>
 
-RUN yum install -y openssh-server openssh-clients
+RUN yum install -y epel-release openssh-server openssh-clients initscripts wget passwd
 
 # Set the password of root user to root
 RUN echo 'root:root' | chpasswd
