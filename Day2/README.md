@@ -80,3 +80,14 @@ In the above command, when it prompts for admin password, you need to type 'Pass
 
 Expected output
 ![image](https://github.com/user-attachments/assets/5b2eb38d-139d-4286-9289-5de4cbcf83ad)
+
+## Lab - Install basic unix tool on ubuntu1 and ubuntu2 ansible node containers using ansible playbook
+```
+cd ~/ansible-aug-2024
+git pull
+cd Day2/playbooks
+ansible-playbook -i hosts install-basictools-playbook.yml
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/2e2f61cc-55ba-4244-96e9-000b6aaa1c7b)
