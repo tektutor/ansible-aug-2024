@@ -51,3 +51,32 @@ ansible -i inventory ubuntu1 -m setup
 Expected output
 ![image](https://github.com/user-attachments/assets/a1d8e343-6744-4cd8-afa5-8ee204e55270)
 ![image](https://github.com/user-attachments/assets/c3e86d20-5689-4d55-aebe-d90985bf039e)
+
+## Lab - Refactoring inventory with group variables
+```
+cd ~/ansible-aug-2024
+git pull
+cd Day2/static-inventory
+cat inventory
+cat hosts
+ansible -i hosts all -m ping
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/659527ce-a760-48b6-8b22-8f2aafc93f89)
+![image](https://github.com/user-attachments/assets/2cca072c-7ab7-4a03-ba39-df13d2d65f8d)
+
+## Info - Structure of ansible playbook
+![playbook](playbook.png)
+
+## Lab - Installing Visual studio code using ansible playbook
+```
+cd ~/ansible-aug-2024
+git pull
+cd Day2/playbooks
+ansible-playbook install-visual-studio-code-locally-playbook.yml --ask-become-pass
+```
+In the above command, when it prompts for admin password, you need to type 'Password@1' without quotes.
+
+Expected output
+![image](https://github.com/user-attachments/assets/5b2eb38d-139d-4286-9289-5de4cbcf83ad)
