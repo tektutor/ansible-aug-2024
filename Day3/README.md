@@ -96,7 +96,7 @@ Expected output
 ```
 cd ~/ansible-aug-2024
 git pull
-cd Day3/python
+cd Day3/python/lab1
 python3 --version
 cat hello.py
 python3 ./hello.py
@@ -115,6 +115,7 @@ Expected output
 ```
 cd ~/ansible-aug-2024
 git pull
+cd Day3/python/lab2
 cat function.py
 python3 ./function.py
 
