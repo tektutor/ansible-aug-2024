@@ -1,0 +1,3 @@
+- name: Install nginx web server in Ubuntu ansible nodes
+  when: ansible_distribution == "Ubuntu" 
+  apt: name=nginx state=latest update_cache=yes

@@ -1,0 +1,27 @@
+---
+# handlers file for nginx
+- name: Start the nginx web server in Ubuntu ansible nodes
+  when: ansible_distribution == "Ubuntu" 
+  service: name=nginx state=started 
+
+- name: Check if nginx web server is already running in Rocky ansible nodes
+  when: ansible_distribution == "Rocky"
+  shell: curl localhost
+  register: output
+  ignore_errors: yes
+
+- name: Start the nginx web server in Rocky ansible nodes
+  when: ansible_distribution == "Rocky" and output.rc != 0
+  shell: nginx 
+    
+- name: Restart nginx web server to apply config changes in Ubuntu
+  when: ansible_distribution == "Ubuntu" 
+  service: name=nginx state=restarted
+
+- name: Stop nginx web server to apply config changes in Rocky
+  when: ansible_distribution == "Rocky"
+  shell: nginx -s stop
+
+- name: Start nginx web server to apply config changes in Rocky
+  when: ansible_distribution == "Rocky"
+  shell: nginx

@@ -1,0 +1,7 @@
+- name: Install Extra Packages for Enterprise Linux (EPEL) 
+  when: ansible_distribution == "Rocky"
+  yum: name=epel-release state=latest 
+
+- name: Install nginx web server in Rocky ansible nodes
+  when: ansible_distribution == "Rocky"
+  yum: name=nginx state=latest 

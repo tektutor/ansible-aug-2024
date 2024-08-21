@@ -1,0 +1,3 @@
+---
+# defaults file for nginx
+provisioner_tool: Docker

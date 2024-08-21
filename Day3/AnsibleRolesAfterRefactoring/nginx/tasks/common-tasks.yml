@@ -1,0 +1,14 @@
+
+  - name: Create the custom folder to store our custom web page
+    file: path=/var/html mode=0777 state=directory
+
+  - name: Retrieve IP address of the ansible node
+    shell: hostname -i
+    register: ipaddr
+
+  - debug: var=ipaddr
+
+  - name: Deploy our custom web page in Ubuntu ansible nodes
+    template: src=index.html dest=/var/html/index.html
+
+
