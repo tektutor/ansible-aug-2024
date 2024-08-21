@@ -171,3 +171,24 @@ chmod +x ./hello.py
 
 Expected output
 ![image](https://github.com/user-attachments/assets/ca37a207-f38a-4200-a97e-53068ac35765)
+
+## Lab - Using dynamic inventory while running ansible playbooks
+```
+cd ~/ansible-aug-2024
+git pull
+cd Day3/AnsibleDynamicInventory
+python3 ./dynamic-inventory.py
+
+cd ../AnsibleRolesAfterRefactoring/
+ansible-playbook -i ../AnsibleDynamicInventory/dynamic-inventory.py ./playbook.yml
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/c495787d-5aad-4719-ac96-e069e9f961a4)
+![image](https://github.com/user-attachments/assets/87a81cc1-025f-4853-825b-f239f968c13f)
+![image](https://github.com/user-attachments/assets/770202e9-e7cb-419b-bb06-1a8842a4abdb)
+
+![image](https://github.com/user-attachments/assets/695bebee-e4a6-4f9d-9e1d-813743ffdc7f)
+![image](https://github.com/user-attachments/assets/abcd8f2e-5f96-4695-a162-da00c614ce32)
+
+![image](https://github.com/user-attachments/assets/18479d87-f4b7-42a5-99b2-767e2b0497f1)
