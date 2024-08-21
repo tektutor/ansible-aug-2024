@@ -109,3 +109,17 @@ chmod +x ./hello.py
 
 Expected output
 ![image](https://github.com/user-attachments/assets/664016aa-de0c-4264-b4bc-f7a36135b467)
+
+## Lab - Simple python function
+```
+cd ~/ansible-aug-2024
+git pull
+cat function.py
+python3 ./function.py
+
+chmod +x ./function.py
+python3 ./function.py
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/f3c57eae-65c8-49a2-9177-8e3c42c11e65)
