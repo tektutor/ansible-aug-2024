@@ -13,7 +13,7 @@
 cd ~/ansible-aug-2024
 git pull
 cd Day3
-ansible-galaxy init
+ansible-galaxy init nginx
 
 nginx
 tree nginx
@@ -32,3 +32,20 @@ tests - folder has a test inventory and playbook to demonstrate how the role can
 
 Expected output
 ![image](https://github.com/user-attachments/assets/ba95c295-e5f6-4bc3-92b0-558b66cba38f)
+
+After refactoring our ansible role folder looks as shown below
+![image](https://github.com/user-attachments/assets/c63a8759-2346-49ab-b661-f800eaba8ed8)
+![image](https://github.com/user-attachments/assets/c76e4460-22fa-474a-96b8-bfca5b17d0cf)
+
+Let's run the ansible playbook
+```
+cd ~/ansible-aug-2024
+git pull
+cd Day3/AnsibleRoles
+ansible-playbook playbook.yml
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/84ce7543-b8ac-49f9-a433-5d5bdda9ae30)
+![image](https://github.com/user-attachments/assets/858636f6-7e3d-44c2-ba3f-db549407c2c0)
+![image](https://github.com/user-attachments/assets/23b78566-708d-4b7b-80ae-c62a576d5155)
