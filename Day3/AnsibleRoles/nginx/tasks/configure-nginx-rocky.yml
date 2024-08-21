@@ -1,0 +1,3 @@
+- name: Configure nginx web server to pick html page from our custom folder in Rocky
+  when: ansible_distribution == "Rocky"
+  copy: src=nginx.conf dest=/etc/nginx/nginx.conf

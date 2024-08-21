@@ -1,0 +1,9 @@
+---
+# tasks file for nginx
+- include_tasks: install-nginx-rocky.yml 
+- include_tasks: install-nginx-ubuntu.yml
+
+- include_tasks: configure-nginx-rocky.yml
+- include_tasks: configure-nginx-ubuntu.yml
+
+- include_tasks: common-tasks.yml

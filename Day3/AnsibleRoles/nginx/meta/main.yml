@@ -1,7 +1,7 @@
 galaxy_info:
-  author: your name
-  description: your role description
-  company: your company (optional)
+  author: Jeganathan Swaminathan <jegan@tektutor.org> 
+  description: Installs and configures nginx to server custom web page from custom folder 
+  company: TekTutor <http://www.tektutor.org> 
 
   # If the issue tracker for your role is not on github, uncomment the
   # next line and provide a value
