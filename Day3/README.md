@@ -178,6 +178,7 @@ cd ~/ansible-aug-2024
 git pull
 cd Day3/AnsibleDynamicInventory
 python3 ./dynamic-inventory.py
+./dynamic-inventory.py
 
 cd ../AnsibleRolesAfterRefactoring/
 ansible-playbook -i ../AnsibleDynamicInventory/dynamic-inventory.py ./playbook.yml
