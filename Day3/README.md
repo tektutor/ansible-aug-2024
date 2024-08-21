@@ -226,3 +226,38 @@ Expected output
 ![image](https://github.com/user-attachments/assets/9421d7ac-a2f1-48e4-88f1-268cf0b7020f)
 ![image](https://github.com/user-attachments/assets/6d323f5f-fdf6-4bdb-b4c7-42716c87448f)
 ![image](https://github.com/user-attachments/assets/c956715d-c891-4dba-8be7-7a4c9f7d28db)
+
+## Info - Ansible vault
+<pre>
+- Ansible vault helps us save any sensitive information like login credentials, certificates, etc
+- Ansible vault will encrypt and save the data
+- at the time of encrypting the data, it will prompt for password, the password will be used as a encryption key
+- using the same password, we can encrypt and decrypt
+- while running the playbook if we supply the vault password, it can decrypt on the fly and use the vault protected data in a secure way
+</pre>
+
+## Lab - Ansible vault
+In my case, I gave 'root' as the password without quotes.
+```
+ansible-vault
+ansible-vault create mysql-login-credentials.yml
+cat mysql-login-credentials.yml
+ansible-vault view mysql-login-credentials.yml
+ansible-vault edit mysql-login-credentials.yml
+
+cat tools-path.yml
+ansible-vault encrypt tools-path.yml
+cat tools-path.yml
+ansible-vault decrypt tools-path.yml
+cat tools-path.yml
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/af4149f7-2de3-4089-b9f5-f6a394e01900)
+![image](https://github.com/user-attachments/assets/88c20547-1e8d-4c6d-94dd-d4389531f0e0)
+![image](https://github.com/user-attachments/assets/0471fa5d-05e9-474f-b197-2bb65a2cfc81)
+![image](https://github.com/user-attachments/assets/809d079d-323b-4bad-a66b-d1c0a6432296)
+![image](https://github.com/user-attachments/assets/0eb35467-0b92-4b23-ab09-9bea4501ffca)
+![image](https://github.com/user-attachments/assets/f6f8f7ea-2155-4d0d-a84c-01ca24144ec9)
+![image](https://github.com/user-attachments/assets/9ce14630-2b8b-4c71-977d-3051769e376e)
+
