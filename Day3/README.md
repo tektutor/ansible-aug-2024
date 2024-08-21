@@ -140,3 +140,19 @@ chmod +x ./function-with-args.py
 
 Expected output
 ![image](https://github.com/user-attachments/assets/b4792313-3b73-4c2f-8075-1d4515f5c22b)
+
+
+## Lab - Python main equivalent entrypoint function
+```
+cd ~/ansible-aug-2024
+git pull
+cd Day3/python/lab4
+cat hello.py
+python3 ./hello.py
+
+chmod +x ./hello.py
+./hello.py
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/1db4b0c8-9cd1-4b9a-b4c9-518abd01f1fd)
