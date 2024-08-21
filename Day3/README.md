@@ -172,6 +172,23 @@ chmod +x ./hello.py
 Expected output
 ![image](https://github.com/user-attachments/assets/ca37a207-f38a-4200-a97e-53068ac35765)
 
+## Lab - Python Inheritance
+```
+cd ~/ansible-aug-2024
+git pull
+cd Day3/python/lab6
+cat myclass.py
+python3 ./myclass.py
+
+chmod +x ./myclass.py
+./myclass.py
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/f6573944-44c4-46fb-86cf-fa638ee5dc52)
+![image](https://github.com/user-attachments/assets/917d3d32-be7f-4bca-9671-7cc41227e3e8)
+
+
 ## Lab - Using dynamic inventory while running ansible playbooks
 ```
 cd ~/ansible-aug-2024
