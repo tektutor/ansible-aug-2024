@@ -77,6 +77,7 @@ Expected output
   - to develop GUI based desktop applications using Qt/QML (C++ GUI Framework)
   - to develop games
   - in academic projects
+  - in big-data applications
 - there are 2 major versions
   - Python2 and
     - orginally doesn't support object oriented principles
