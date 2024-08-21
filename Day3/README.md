@@ -125,3 +125,18 @@ python3 ./function.py
 
 Expected output
 ![image](https://github.com/user-attachments/assets/f3c57eae-65c8-49a2-9177-8e3c42c11e65)
+
+## Lab - Python function with arguments
+```
+cd ~/ansible-aug-2024
+git pull
+cd Day3/python/lab3
+cat function-with-args.py
+python3 ./function-with-args.py
+
+chmod +x ./function-with-args.py
+./function-with-args.py
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/b4792313-3b73-4c2f-8075-1d4515f5c22b)
