@@ -65,3 +65,61 @@ Expected output
 ![image](https://github.com/user-attachments/assets/c446c0ee-42f9-4fd3-9cdd-a61a2da8c9a9)
 ![image](https://github.com/user-attachments/assets/f581ae31-15b6-4d26-9998-706a0237f65a)
 ![image](https://github.com/user-attachments/assets/0ef7865c-64dc-4498-83e9-62854d393d66)
+
+## Python Basics
+<pre>
+- scripting language
+- dynamically typed language
+- python is used
+  - to develop scientific applications
+  - AI/ML/DL
+  - to develop web applications using flask/django frameworks
+  - to develop GUI based desktop applications using Qt/QML (C++ GUI Framework)
+  - to develop games
+  - in academic projects
+- there are 2 major versions
+  - Python2 and
+    - orginally doesn't support object oriented principles
+    - one could only develop structured application ( non-object oriented application development )
+    - many libraries were developed for Python2, hence the industry wasn't ready to adapt python3
+  
+  - Python3
+    - they introducted OOPs concepts
+    - though Python3 supported OOPs concepts, the same set of libraries that were there for Python2 was not supported for Python3
+    - some of the Python3 features were back-ported(integrated) in Python2 
+    - these days Python3 is used in most of the projects
+    - latest versions of Ansible also supports only Python3
+</pre>
+
+## Lab - Running your first python script
+```
+cd ~/ansible-aug-2024
+git pull
+cd Day3/python
+python3 --version
+cat hello.py
+python3 ./hello.py
+```
+
+Alternatively, you could make the hello.py an executable file 
+```
+chmod +x ./hello.py
+./hello.py
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/664016aa-de0c-4264-b4bc-f7a36135b467)
+
+## Lab - Simple python function
+```
+cd ~/ansible-aug-2024
+git pull
+cat function.py
+python3 ./function.py
+
+chmod +x ./function.py
+python3 ./function.py
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/f3c57eae-65c8-49a2-9177-8e3c42c11e65)
