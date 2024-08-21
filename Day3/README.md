@@ -49,3 +49,19 @@ Expected output
 ![image](https://github.com/user-attachments/assets/84ce7543-b8ac-49f9-a433-5d5bdda9ae30)
 ![image](https://github.com/user-attachments/assets/858636f6-7e3d-44c2-ba3f-db549407c2c0)
 ![image](https://github.com/user-attachments/assets/23b78566-708d-4b7b-80ae-c62a576d5155)
+
+## Lab - Executing the refactored nginx ansible role
+```
+cd ~/ansible-aug-2024
+git pull
+cd Day3/AnsibleRolesAfterRefactoring
+ansible-playbook playbook.yml
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/1e9f0f62-9267-4e9a-be23-990a0929aacc)
+![image](https://github.com/user-attachments/assets/2eb81aa1-96bc-472b-83da-1b0355b7951e)
+![image](https://github.com/user-attachments/assets/89642e70-9aec-4347-9d54-8fcbeab0d953)
+![image](https://github.com/user-attachments/assets/c446c0ee-42f9-4fd3-9cdd-a61a2da8c9a9)
+![image](https://github.com/user-attachments/assets/f581ae31-15b6-4d26-9998-706a0237f65a)
+![image](https://github.com/user-attachments/assets/0ef7865c-64dc-4498-83e9-62854d393d66)
