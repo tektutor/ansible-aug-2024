@@ -13,7 +13,7 @@
 cd ~/ansible-aug-2024
 git pull
 cd Day3
-ansible-galaxy init
+ansible-galaxy init nginx
 
 nginx
 tree nginx
