@@ -226,3 +226,12 @@ Expected output
 ![image](https://github.com/user-attachments/assets/9421d7ac-a2f1-48e4-88f1-268cf0b7020f)
 ![image](https://github.com/user-attachments/assets/6d323f5f-fdf6-4bdb-b4c7-42716c87448f)
 ![image](https://github.com/user-attachments/assets/c956715d-c891-4dba-8be7-7a4c9f7d28db)
+
+## Info - Ansible vault
+<pre>
+- Ansible vault helps us save any sensitive information like login credentials, certificates, etc
+- Ansible vault will encrypt and save the data
+- at the time of encrypting the data, it will prompt for password, the password will be used as a encryption key
+- using the same password, we can encrypt and decrypt
+- while running the playbook if we supply the vault password, it can decrypt on the fly and use the vault protected data in a secure way
+</pre>
