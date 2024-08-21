@@ -244,6 +244,12 @@ ansible-vault create mysql-login-credentials.yml
 cat mysql-login-credentials.yml
 ansible-vault view mysql-login-credentials.yml
 ansible-vault edit mysql-login-credentials.yml
+
+cat tools-path.yml
+ansible-vault encrypt tools-path.yml
+cat tools-path.yml
+ansible-vault decrypt tools-path.yml
+cat tools-path.yml
 ```
 
 Expected output
@@ -253,4 +259,5 @@ Expected output
 ![image](https://github.com/user-attachments/assets/809d079d-323b-4bad-a66b-d1c0a6432296)
 ![image](https://github.com/user-attachments/assets/0eb35467-0b92-4b23-ab09-9bea4501ffca)
 ![image](https://github.com/user-attachments/assets/f6f8f7ea-2155-4d0d-a84c-01ca24144ec9)
+![image](https://github.com/user-attachments/assets/9ce14630-2b8b-4c71-977d-3051769e376e)
 
