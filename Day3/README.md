@@ -172,6 +172,23 @@ chmod +x ./hello.py
 Expected output
 ![image](https://github.com/user-attachments/assets/ca37a207-f38a-4200-a97e-53068ac35765)
 
+## Lab - Python Inheritance
+```
+cd ~/ansible-aug-2024
+git pull
+cd Day3/python/lab6
+cat myclass.py
+python3 ./myclass.py
+
+chmod +x ./myclass.py
+./myclass.py
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/f6573944-44c4-46fb-86cf-fa638ee5dc52)
+![image](https://github.com/user-attachments/assets/917d3d32-be7f-4bca-9671-7cc41227e3e8)
+
+
 ## Lab - Using dynamic inventory while running ansible playbooks
 ```
 cd ~/ansible-aug-2024
@@ -193,3 +210,19 @@ Expected output
 ![image](https://github.com/user-attachments/assets/abcd8f2e-5f96-4695-a162-da00c614ce32)
 
 ![image](https://github.com/user-attachments/assets/18479d87-f4b7-42a5-99b2-767e2b0497f1)
+
+## Lab - Developing a custom ansible module and invoking it from a playbook
+```
+cd ~/ansible-aug-2024
+git pull
+cd Day3/CustomAnsibleModule
+tree
+cat library/hello.py
+cat playbook.yml
+ansible-playbook playbook.yml
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/9421d7ac-a2f1-48e4-88f1-268cf0b7020f)
+![image](https://github.com/user-attachments/assets/6d323f5f-fdf6-4bdb-b4c7-42716c87448f)
+![image](https://github.com/user-attachments/assets/c956715d-c891-4dba-8be7-7a4c9f7d28db)
