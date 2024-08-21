@@ -1,0 +1,8 @@
+- name: This playbook demonstrates invoking our custom hello module
+  hosts: localhost
+  tasks:
+  - name: Invoke hello custom module
+    hello: message="DevOps"
+    register: output
+
+  - debug: var=output
