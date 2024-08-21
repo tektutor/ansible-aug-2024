@@ -282,6 +282,7 @@ Expected output
 ![image](https://github.com/user-attachments/assets/5567abe1-42f9-458b-9d92-fd2479250689)
 
 ## Lab - Chaning the vault password using rekey
+I changed the password from 'root' to 'root@123' without quotes.
 ```
 cd ~/ansible-aug-2024
 git pull
