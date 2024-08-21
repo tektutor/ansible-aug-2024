@@ -9,3 +9,9 @@ ansible_user=root
 ansible_host=localhost
 ansible_private_key_file=~/.ssh/id_rsa
 
+[dev]
+ubuntu[1:2]
+
+[prod]
+rocky[1:2]
+
