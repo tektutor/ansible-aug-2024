@@ -156,3 +156,18 @@ chmod +x ./hello.py
 
 Expected output
 ![image](https://github.com/user-attachments/assets/1db4b0c8-9cd1-4b9a-b4c9-518abd01f1fd)
+
+## Lab - Python class
+```
+cd ~/ansible-aug-2024
+git pull
+cd Day3/python/lab5
+cat hello.py
+python3 ./hello.py
+
+chmod +x ./hello.py
+./hello.py
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/ca37a207-f38a-4200-a97e-53068ac35765)
