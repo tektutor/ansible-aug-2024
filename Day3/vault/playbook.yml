@@ -1,0 +1,9 @@
+- name: This playbook demonstrate how we can retrieve information from a vault protected file and use them in playbooks
+  hosts: localhost
+  vars_files:
+  - mysql-login-credentials.yml
+  - tools-path.yml
+  tasks:
+  - debug: msg="user={{username}}, password={{password}}"
+  - debug: msg="{{item.key}} ==> {{item.value}}"
+    with_dict: "{{tools_path}}"
