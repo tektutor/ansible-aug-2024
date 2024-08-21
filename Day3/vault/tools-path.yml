@@ -1,0 +1,4 @@
+tools_path:
+  java_home: /usr/lib/jdk11
+  maven_home: /usr/share/maven
+  ansible_home: /usr/share/ansible
