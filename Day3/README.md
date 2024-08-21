@@ -235,3 +235,22 @@ Expected output
 - using the same password, we can encrypt and decrypt
 - while running the playbook if we supply the vault password, it can decrypt on the fly and use the vault protected data in a secure way
 </pre>
+
+## Lab - Ansible vault
+In my case, I gave 'root' as the password without quotes.
+```
+ansible-vault
+ansible-vault create mysql-login-credentials.yml
+cat mysql-login-credentials.yml
+ansible-vault view mysql-login-credentials.yml
+ansible-vault edit mysql-login-credentials.yml
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/af4149f7-2de3-4089-b9f5-f6a394e01900)
+![image](https://github.com/user-attachments/assets/88c20547-1e8d-4c6d-94dd-d4389531f0e0)
+![image](https://github.com/user-attachments/assets/0471fa5d-05e9-474f-b197-2bb65a2cfc81)
+![image](https://github.com/user-attachments/assets/809d079d-323b-4bad-a66b-d1c0a6432296)
+![image](https://github.com/user-attachments/assets/0eb35467-0b92-4b23-ab09-9bea4501ffca)
+![image](https://github.com/user-attachments/assets/f6f8f7ea-2155-4d0d-a84c-01ca24144ec9)
+
