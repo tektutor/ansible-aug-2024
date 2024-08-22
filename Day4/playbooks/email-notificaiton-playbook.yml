@@ -1,0 +1,13 @@
+- name: This playbook will send an email notification
+  hosts: localhost
+  tasks:
+  - name: Send an email
+    community.general.mail:
+      host: live.smtp.mailtrap.io 
+      port: 587
+      username: api 
+      password: ceb5142c20468efec7a15d3243e08929 
+      sender: test@demomailtrap.com 
+      to: tektutoransible@gmail.com 
+      subject: "TekTutor - Ansible Email Notification - second email"
+      body: "System {{ ansible_hostname }} has been successfully povisioned !."
