@@ -102,4 +102,7 @@ Expected output
 - Supports login through OAuth ( Third-party login authentication mechnaism )
 - Red Hat world-wide support
 </pre>
-##
+
+## Lab - Add Inventory => Add Host
+![image](https://github.com/user-attachments/assets/fde42758-b798-4aa1-b4ba-604703ad9f09)
+
