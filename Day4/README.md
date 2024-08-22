@@ -25,10 +25,7 @@ git checkout tags/2.19.0
 make deploy
 kubectl config set-context --current --namespace=awx
 kubectl get pods
-kubectl get pods -l "app.kubernetes.io/managed-by=awx-operator"
-kubectl get svc -l "app.kubernetes.io/managed-by=awx-operator"
-kubectl logs -f deployments/awx-operator-controller-manager -c awx-manager
-kubectl get secret awx-demo-admin-password -o jsonpath="{.data.password}" | base64 --decode ; echo
+kubectl get pods -l "app.kubernetes.io/managed-by=awx-operator" -w
 ```
 
 Expected output
@@ -49,7 +46,6 @@ spec:
 Run the below command
 ```
 kubectl apply -f awx-demo.yml
-kubectl get pods -l "app.kubernetes.io/managed-by=awx-operator" -w
 kubectl get svc -l "app.kubernetes.io/managed-by=awx-operator"
 kubectl logs -f deployments/awx-operator-controller-manager -c awx-manager
 kubectl get secret awx-demo-admin-password -o jsonpath="{.data.password}" | base64 --decode ; echo
