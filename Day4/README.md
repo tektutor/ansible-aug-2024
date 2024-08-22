@@ -106,4 +106,5 @@ Expected output
 ## Lab - Add Inventory
 Add Host
 ![image](https://github.com/user-attachments/assets/2e1b8e78-60fa-4173-969c-4335bcfa0455)
+![image](https://github.com/user-attachments/assets/9dcc20cb-1d03-4a28-8d26-bac96c3da1d5)
 
