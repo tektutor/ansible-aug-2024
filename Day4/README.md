@@ -1,6 +1,6 @@
 # Day 4
 
-## Lab - Installing minikube
+## Lab - Installing minikube ( From Ubuntu RPS Lab Machine terminal )
 ```
 curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
 sudo install minikube-linux-amd64 /usr/local/bin/minikube && rm minikube-linux-amd64
@@ -30,7 +30,6 @@ kubectl get pods -l "app.kubernetes.io/managed-by=awx-operator"
 kubectl get svc -l "app.kubernetes.io/managed-by=awx-operator"
 kubectl logs -f deployments/awx-operator-controller-manager -c awx-manager
 kubectl get secret awx-demo-admin-password -o jsonpath="{.data.password}" | base64 --decode ; echo
-
 ```
 
 Expected output
@@ -64,7 +63,7 @@ Expected output
 ![image](https://github.com/user-attachments/assets/e4359237-e11e-4400-a342-090657c4bb3f)
 ![image](https://github.com/user-attachments/assets/56258bb5-960d-4bbd-af07-c37f9c013d37)
 
-You can access your Ansible Tower from your Ubuntu RPS Lab web browser
+You can access your Ansible Tower from your Ubuntu RPS Lab web browser.  The port 31577 has to be replaced with your nodeport service port.
 ```
 minikube ip
 kubectl get svc -l "app.kubernetes.io/managed-by=awx-operator"
@@ -82,8 +81,8 @@ Login credentials
 username - admin
 password - vx6qfhJVrysWvRyUxY9txGz1as3Svc
 </pre>
+You need to use the password shown by your 'kubectl get secret' command as it would be different for each one of us.
 
 Expected output
 ![image](https://github.com/user-attachments/assets/cae5bc28-86dc-4794-bdfd-c67f262ba256)
 ![image](https://github.com/user-attachments/assets/72be4d3e-85d9-44af-a5d8-3cab534e446e)
-
