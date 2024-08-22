@@ -70,7 +70,18 @@ minikube ip
 kubectl get svc -l "app.kubernetes.io/managed-by=awx-operator"
 http://192.168.49.2:31577
 ```
+You can retrieve the password as shown below
+<pre>
+kubectl get secret awx-demo-admin-password -o jsonpath="{.data.password}" | base64 --decode ; echo  
+</pre>  
+
+Login credentials
+<pre>
+username - admin
+password - 
+</pre>
 
 Expected output
 ![image](https://github.com/user-attachments/assets/cae5bc28-86dc-4794-bdfd-c67f262ba256)
+![image](https://github.com/user-attachments/assets/72be4d3e-85d9-44af-a5d8-3cab534e446e)
 
