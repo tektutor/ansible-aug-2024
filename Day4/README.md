@@ -107,4 +107,8 @@ Expected output
 Add Host
 ![image](https://github.com/user-attachments/assets/2e1b8e78-60fa-4173-969c-4335bcfa0455)
 ![image](https://github.com/user-attachments/assets/9dcc20cb-1d03-4a28-8d26-bac96c3da1d5)
+![image](https://github.com/user-attachments/assets/1a5c8bbd-6bab-4e4c-a50e-565a1b85b9f8)
+![image](https://github.com/user-attachments/assets/6fcb2df1-2dfe-48e3-af1c-4f8b9a95b638)
+![image](https://github.com/user-attachments/assets/97ca0342-1abc-4ce8-a33d-bae5e15d9b55)
+
 
