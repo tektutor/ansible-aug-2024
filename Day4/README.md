@@ -73,7 +73,9 @@ http://192.168.49.2:31577
 You can retrieve the password as shown below
 <pre>
 kubectl get secret awx-demo-admin-password -o jsonpath="{.data.password}" | base64 --decode ; echo  
-</pre>  
+</pre>
+Expected output
+![image](https://github.com/user-attachments/assets/f7e5dd87-06a9-4f36-8cc9-69d1ffcd2b4a)
 
 Login credentials
 <pre>
