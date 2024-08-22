@@ -21,7 +21,6 @@ Expected output
 ```
 git clone https://github.com/ansible/awx-operator.git
 cd awx-operator
-git tag
 git checkout tags/2.19.0
 make deploy
 kubectl config set-context --current --namespace=awx
