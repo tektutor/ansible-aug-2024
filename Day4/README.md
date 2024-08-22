@@ -37,3 +37,22 @@ Expected output
 ![image](https://github.com/user-attachments/assets/e9f80b39-63c0-471d-9045-0c5cfc787c74)
 ![image](https://github.com/user-attachments/assets/da57f005-fa4c-45aa-a217-c14fbbc52d43)
 
+Create a file named awx-demo.yml with below content
+```
+---
+apiVersion: awx.ansible.com/v1beta1
+kind: AWX
+metadata:
+  name: awx-demo
+spec:
+  service_type: nodeport
+```
+
+Run the below command
+```
+kubectl apply -f awx-demo.yml
+kubectl get pods -l "app.kubernetes.io/managed-by=awx-operator"
+kubectl get svc -l "app.kubernetes.io/managed-by=awx-operator"
+kubectl logs -f deployments/awx-operator-controller-manager -c awx-manager
+
+```
