@@ -103,6 +103,7 @@ Expected output
 - Red Hat world-wide support
 </pre>
 
-## Lab - Add Inventory => Add Host
+## Lab - Add Inventory
+Add Host
 ![image](https://github.com/user-attachments/assets/2e1b8e78-60fa-4173-969c-4335bcfa0455)
 
