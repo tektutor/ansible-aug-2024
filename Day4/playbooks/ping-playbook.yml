@@ -1,0 +1,5 @@
+- name: Ping all the ansible nodes
+  hosts: all
+  tasks:
+  - name: Ping ansible node
+    ping:
