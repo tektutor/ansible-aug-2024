@@ -64,3 +64,13 @@ Expected output
 ![image](https://github.com/user-attachments/assets/e4359237-e11e-4400-a342-090657c4bb3f)
 ![image](https://github.com/user-attachments/assets/56258bb5-960d-4bbd-af07-c37f9c013d37)
 
+You can access your Ansible Tower from your Ubuntu RPS Lab web browser
+```
+minikube ip
+kubectl get svc -l "app.kubernetes.io/managed-by=awx-operator"
+http://192.168.49.2:31577
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/cae5bc28-86dc-4794-bdfd-c67f262ba256)
+
