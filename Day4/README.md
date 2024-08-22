@@ -51,8 +51,13 @@ spec:
 Run the below command
 ```
 kubectl apply -f awx-demo.yml
-kubectl get pods -l "app.kubernetes.io/managed-by=awx-operator"
+kubectl get pods -l "app.kubernetes.io/managed-by=awx-operator" -w
 kubectl get svc -l "app.kubernetes.io/managed-by=awx-operator"
 kubectl logs -f deployments/awx-operator-controller-manager -c awx-manager
 
 ```
+
+Expected output
+![image](https://github.com/user-attachments/assets/aa3b0fb3-234d-4ef4-8a14-78b0d21e466a)
+![image](https://github.com/user-attachments/assets/a12ac0ce-266f-452e-b972-76e765313b67)
+![image](https://github.com/user-attachments/assets/19c90fda-141e-4a2e-9dbf-4e993b4b8c3f)
