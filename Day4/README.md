@@ -81,3 +81,25 @@ You need to use the password shown by your 'kubectl get secret' command as it wo
 Expected output
 ![image](https://github.com/user-attachments/assets/cae5bc28-86dc-4794-bdfd-c67f262ba256)
 ![image](https://github.com/user-attachments/assets/72be4d3e-85d9-44af-a5d8-3cab534e446e)
+
+## Info - Ansible Tower Overview
+<pre>
+- Ansible comes in 3 flavours
+  1. Ansible Core - CLI opensource configuration management tool developed by Ansible Inc organization
+  2. AWX - Ansible Tower - opensource configuration management tool developed on top of Ansible Core
+  3. Red Hat Ansible Tower - enterprise licensed configuration management tool developed on top of AWX
+- AWX and Red Hat Ansible Tower both supports webconsole
+- You get support from Red Hat in case you are using Red Hat Ansible Tower
+- Functionally, AWX and Red Hat Ansible Tower are one and the same
+</pre>
+
+## Info - Red Hat Ansible Tower Overview
+<pre>
+- licensed Enterprise Product
+- Supports User Management and Teams
+- Supports Role Based Access Control
+- Supports historical Playbook logs
+- Supports login through OAuth ( Third-party login authentication mechnaism )
+- Red Hat world-wide support
+</pre>
+##
