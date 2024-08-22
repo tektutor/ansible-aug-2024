@@ -54,7 +54,7 @@ kubectl apply -f awx-demo.yml
 kubectl get pods -l "app.kubernetes.io/managed-by=awx-operator" -w
 kubectl get svc -l "app.kubernetes.io/managed-by=awx-operator"
 kubectl logs -f deployments/awx-operator-controller-manager -c awx-manager
-
+kubectl get secret awx-demo-admin-password -o jsonpath="{.data.password}" | base64 --decode ; echo
 ```
 
 Expected output
