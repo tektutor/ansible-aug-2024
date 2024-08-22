@@ -1,4 +1,4 @@
 - name: This playbook demonstrates how to invoke our custom nginx ansible role in playbooks
-  hosts: prod 
+  hosts: all 
   roles:
   - nginx

@@ -280,3 +280,19 @@ Expected output
 ![image](https://github.com/user-attachments/assets/222e7e5d-8aa2-4312-be93-c9f14ff9c736)
 ![image](https://github.com/user-attachments/assets/1e1e2b69-b78e-4d32-bcef-446375c5fdd3)
 ![image](https://github.com/user-attachments/assets/5567abe1-42f9-458b-9d92-fd2479250689)
+
+## Lab - Chaning the vault password using rekey
+I changed the password from 'root' to 'root@123' without quotes.
+```
+cd ~/ansible-aug-2024
+git pull
+cd Day3/vault
+ls -l
+cat mysql-login-credentials.yml
+cat tools-path.yml
+
+ansible-vault rekey mysql-login-credentials.yml
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/c6ffbfff-34d7-4f7e-a244-e89d3a966213)
