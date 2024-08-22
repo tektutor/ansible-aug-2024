@@ -80,7 +80,7 @@ Expected output
 Login credentials
 <pre>
 username - admin
-password - 
+password - vx6qfhJVrysWvRyUxY9txGz1as3Svc
 </pre>
 
 Expected output
